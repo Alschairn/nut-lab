@@ -13,6 +13,9 @@ type Classpath struct {
 	userClasspath Entry
 }
 
+/**
+	根据参数初始化类路径
+ */
 func Parse(jreOption, cpOption string) *Classpath {
 	cp := &Classpath{}
 	cp.parseBootAndExtClasspath(jreOption)
@@ -20,6 +23,9 @@ func Parse(jreOption, cpOption string) *Classpath {
 	return cp
 }
 
+/**
+	初始化系统类路径
+ */
 func (self *Classpath) parseBootAndExtClasspath(jreOption string) {
 	jreDir := getJreDir(jreOption)
 	jreLibPath := filepath.Join(jreDir, "lib", "*")
@@ -31,8 +37,11 @@ func (self *Classpath) parseBootAndExtClasspath(jreOption string) {
 	self.extClasspath = newWildcardEntry(jreExtPath)
 }
 
+/**
+	初始化用户类路径
+	如果没有提供 -classpath/-cp 实现，则使用当前目录作为用户类路径
+ */
 func (self *Classpath) parseUserClasspath(cpOption string) {
-	// 如果用户没有提供 -classpath/-cp 选项，则使用当前目录作为用户类路径
 	if cpOption == "" {
 		cpOption = "."
 	}
