@@ -44,4 +44,3 @@ func (self *ClassReader) readBytes(length uint32) []byte {
 	self.data = self.data[length:]
 	return bytes
 }
-
