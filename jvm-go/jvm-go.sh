@@ -1,7 +1,8 @@
 #!/bin/bash
 
-# 设置gopath到当前目录
-export GOPATH=$PWD && export GOBIN=$PWD/bin
+# 设置go path到当前目录
+export GOPATH=$(cd `dirname $0`; pwd)
+export GOBIN=$(cd `dirname $0`; pwd)/bin
 
-# 构建main
-cd src/main && go build main.go
+# 构建main函数
+cd $(cd `dirname $0`; pwd)/src/main && go build main.go
