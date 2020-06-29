@@ -19,7 +19,6 @@ type ExceptionTableEntry struct {
 	catchType uint16
 }
 
-
 func (self *CodeAttribute) readInfo(reader *ClassReader) {
 	self.maxStack = reader.readUint16()
 	self.maxLocals = reader.readUint16()
@@ -34,8 +33,8 @@ func readExceptionTable(reader *ClassReader) []*ExceptionTableEntry {
 	exceptionTable := make([]*ExceptionTableEntry, exceptionTableLength)
 	for i := range exceptionTable {
 		exceptionTable[i] = &ExceptionTableEntry{
-			startPc: reader.readUint16(),
-			endPc: reader.readUint16(),
+			startPc:   reader.readUint16(),
+			endPc:     reader.readUint16(),
 			handlerPc: reader.readUint16(),
 			catchType: reader.readUint16(),
 		}
