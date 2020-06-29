@@ -35,16 +35,43 @@ func Parse(classData []byte) (cf *ClassFile, err error) {
 func (self *ClassFile) read(reader *ClassReader) {
 	self.readAndCheckMagic(reader)
 	self.readAndCheckVersion(reader)
-
+	self.constantPool = readConstantPool(reader)
 	self.accessFlags = reader.readUint16()
 	self.thisClass = reader.readUint16()
 	self.superClass = reader.readUint16()
 	self.interfaces = reader.readUint16s()
+fmt.Printf("44444\n	")
 
-	self.constantPool = readConstantPool(reader)
 	self.fields = readMembers(reader, self.constantPool)
+	fmt.Printf("44444\n")
+
 	self.methods = readMembers(reader, self.constantPool)
+
 	self.attributes = readAttributes(reader, self.constantPool)
+
+
+	//self.readAndCheckMagic(reader)
+	//self.readAndCheckVersion(reader)
+	//
+	//fmt.Printf("11111111\n")
+	//self.accessFlags = reader.readUint16()
+	//fmt.Printf("222222222\n")
+	//
+	//self.thisClass = reader.readUint16()
+	//fmt.Printf("222222222\n")
+	//
+	//self.superClass = reader.readUint16()
+	//fmt.Printf("222222222\n")
+	//
+	//self.interfaces = reader.readUint16s()
+	//fmt.Printf("222222222\n")
+	//
+	//
+	//self.constantPool = readConstantPool(reader)
+	//self.fields = readMembers(reader, self.constantPool)
+	//self.methods = readMembers(reader, self.constantPool)
+	//self.attributes = readAttributes(reader, self.constantPool)
+	//fmt.Printf("3333333\n")
 
 }
 
