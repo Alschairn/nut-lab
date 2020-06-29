@@ -13,7 +13,7 @@ type ClassFile struct {
 	interfaces   []uint16        // 常量池索引，类实现的所有接口的名称
 	fields       []*MemberInfo   // 字段表
 	methods      []*MemberInfo   // 方法表
-	attributes   []AttributeInfo // todo
+	attributes   []AttributeInfo // 属性表
 }
 
 func Parse(classData []byte) (cf *ClassFile, err error) {
