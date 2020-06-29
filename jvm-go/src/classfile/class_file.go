@@ -53,6 +53,7 @@ func (self *ClassFile) read(reader *ClassReader) {
  */
 func (self *ClassFile) readAndCheckMagic(reader *ClassReader) {
 	magic := reader.readUint32()
+	fmt.Printf("magic %v \n", fmt.Sprint(magic))
 	if magic != 0xCAFFBABE {
 		panic("java.lang.ClassFormatError: magic!")
 	}
