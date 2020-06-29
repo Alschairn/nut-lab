@@ -13,7 +13,7 @@ type ClassFile struct {
 	interfaces   []uint16        // 常量池索引，类实现的所有接口的名称
 	fields       []*MemberInfo   // 字段表
 	methods      []*MemberInfo   // 方法表
-	attributes   []AttributeInfo // todo
+	attributes   []AttributeInfo // 属性表
 }
 
 func Parse(classData []byte) (cf *ClassFile, err error) {
@@ -33,46 +33,16 @@ func Parse(classData []byte) (cf *ClassFile, err error) {
 }
 
 func (self *ClassFile) read(reader *ClassReader) {
-	self.readAndCheckMagic(reader)
-	self.readAndCheckVersion(reader)
-	self.constantPool = readConstantPool(reader)
-	self.accessFlags = reader.readUint16()
-	self.thisClass = reader.readUint16()
-	self.superClass = reader.readUint16()
-	self.interfaces = reader.readUint16s()
-fmt.Printf("44444\n	")
-
-	self.fields = readMembers(reader, self.constantPool)
-	fmt.Printf("44444\n")
-
-	self.methods = readMembers(reader, self.constantPool)
-
-	self.attributes = readAttributes(reader, self.constantPool)
-
-
-	//self.readAndCheckMagic(reader)
-	//self.readAndCheckVersion(reader)
-	//
-	//fmt.Printf("11111111\n")
-	//self.accessFlags = reader.readUint16()
-	//fmt.Printf("222222222\n")
-	//
-	//self.thisClass = reader.readUint16()
-	//fmt.Printf("222222222\n")
-	//
-	//self.superClass = reader.readUint16()
-	//fmt.Printf("222222222\n")
-	//
-	//self.interfaces = reader.readUint16s()
-	//fmt.Printf("222222222\n")
-	//
-	//
-	//self.constantPool = readConstantPool(reader)
-	//self.fields = readMembers(reader, self.constantPool)
-	//self.methods = readMembers(reader, self.constantPool)
-	//self.attributes = readAttributes(reader, self.constantPool)
-	//fmt.Printf("3333333\n")
-
+	self.readAndCheckMagic(reader)                              // 读取并效验magic，类型u4
+	self.readAndCheckVersion(reader)                            // 读取并效验主次版本号，类型都是u2
+	self.constantPool = readConstantPool(reader)                // 读取常量池，constant_pool_count类型是u2，代表常量池大小，constant_pool代表常量，各类别类型不定
+	self.accessFlags = reader.readUint16()                      // 读取类的访问控制符
+	self.thisClass = reader.readUint16()                        // 读取指向当前类的常量索引，用来确定这个类的全限定名 类型u2
+	self.superClass = reader.readUint16()                       // 读取指向父类的常量索引，用来确定父类的全限定名 类型u2
+	self.interfaces = reader.readUint16s()                      // 读取接口信息，interfaces_count 类型u2，代表实现接口数量，interfaces 类型u2，指向接口的常量索引
+	self.fields = readMembers(reader, self.constantPool)        // 读取字段表集合，fields_count 类型u2，代表字段数量，fields 不定长，代表所有字段
+	self.methods = readMembers(reader, self.constantPool)       // 读取方法表集合，methods_count 类型u2，代表字段数量，methods 不定长，代表所有方法
+	self.attributes = readAttributes(reader, self.constantPool) // 读取属性表集合，attributes_count 类型u2，代表属性数量，attributes 不定长，代表所有属性
 }
 
 /**

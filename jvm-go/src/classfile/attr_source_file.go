@@ -4,7 +4,7 @@ package classfile
 	可选定长属性，只会出现在ClassFile结构中，用于指出源文件名
  */
 type SourceFileAttribute struct {
-	cp ConstantPool
+	cp              ConstantPool
 	sourceFileIndex uint16
 }
 
