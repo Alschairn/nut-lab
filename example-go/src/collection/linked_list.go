@@ -64,3 +64,38 @@ func (self *LinkedList) insert(i int, node *LinkedListNode) bool {
 	return true
 }
 
+
+/**
+	删除指定下标
+ */
+func (self *LinkedList) deleteIndex(index int) bool {
+	if self.size == 0 || index >= self.size {
+		return false
+	}
+
+	if index == 0 {
+		self.head = self.head.next
+	} else {
+		preNode := self.head
+		for i := 1; i < self.size; i++ {
+			preNode = preNode.next
+		}
+	}
+
+
+	return true
+}
+
+
+/**
+	删除节点
+ */
+func (self *LinkedList) deleteNode(node *LinkedListNode) bool {
+	if self.size == 0 {
+		return false
+	}
+
+
+
+	return true
+}
