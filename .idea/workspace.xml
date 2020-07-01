@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1a2b5486-52d5-465f-b99c-cb796af736c9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/email.sh" afterDir="false" />
-    </list>
+    <list default="true" id="1a2b5486-52d5-465f-b99c-cb796af736c9" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -34,7 +32,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="go" value="113" />
+          <entry key="go" value="115" />
           <entry key="md" value="4" />
           <entry key="sh" value="2" />
         </counts>
@@ -42,13 +40,13 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Bash" value="1" />
-          <entry key="Go" value="113" />
+          <entry key="Go" value="115" />
           <entry key="PLAIN_TEXT" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="go" value="18709" />
+          <entry key="go" value="18711" />
           <entry key="md" value="32" />
           <entry key="sh" value="390" />
         </counts>
@@ -56,7 +54,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Bash" value="158" />
-          <entry key="Go" value="18709" />
+          <entry key="Go" value="18711" />
           <entry key="PLAIN_TEXT" value="264" />
         </counts>
       </usages-collector>
@@ -81,13 +79,31 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/email.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="217">
-              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+            <state relative-caret-position="176">
+              <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/example-go/src/collection/linked_list.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1872">
+              <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/example-go/src/constant/object.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="62">
+              <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jvm-go/src/classfile/attr_code.go">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="31">
@@ -181,8 +197,8 @@
         <option value="$PROJECT_DIR$/example-go/src/map/concurrent_hash_map.go" />
         <option value="$PROJECT_DIR$/example-go/src/collection/constan.go" />
         <option value="$PROJECT_DIR$/example-go/src/constant/object.go" />
-        <option value="$PROJECT_DIR$/example-go/src/collection/linked_list.go" />
         <option value="$PROJECT_DIR$/email.sh" />
+        <option value="$PROJECT_DIR$/example-go/src/collection/linked_list.go" />
       </list>
     </option>
   </component>
@@ -223,20 +239,32 @@
             <path>
               <item name="nut-lab" type="b2602c69:ProjectViewProjectNode" />
               <item name="nut-lab" type="462c0819:PsiDirectoryNode" />
-              <item name="jvm-go" type="462c0819:PsiDirectoryNode" />
+              <item name="example-go" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="nut-lab" type="b2602c69:ProjectViewProjectNode" />
               <item name="nut-lab" type="462c0819:PsiDirectoryNode" />
-              <item name="jvm-go" type="462c0819:PsiDirectoryNode" />
+              <item name="example-go" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="nut-lab" type="b2602c69:ProjectViewProjectNode" />
               <item name="nut-lab" type="462c0819:PsiDirectoryNode" />
-              <item name="jvm-go" type="462c0819:PsiDirectoryNode" />
+              <item name="example-go" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="classfile" type="462c0819:PsiDirectoryNode" />
+              <item name="collection" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nut-lab" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nut-lab" type="462c0819:PsiDirectoryNode" />
+              <item name="example-go" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="constant" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nut-lab" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nut-lab" type="462c0819:PsiDirectoryNode" />
+              <item name="jvm-go" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="nut-lab" type="b2602c69:ProjectViewProjectNode" />
@@ -460,9 +488,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18526466" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18526466" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -478,7 +505,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Build" order="7" weight="0.3287841" />
       <window_info anchor="bottom" id="sbt-shell-toolwindow" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.59057075" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.59057075" />
       <window_info anchor="bottom" id="Docker" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Spring" order="12" />
@@ -816,20 +843,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/example-go/src/constant/object.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="62">
-          <caret line="2" column="24" lean-forward="true" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/example-go/src/collection/linked_list.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="97">
-          <caret line="102" lean-forward="true" selection-start-line="102" selection-end-line="102" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/local/go/src/builtin/builtin.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="103">
@@ -837,17 +850,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/email.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/jvm-go/src/classfile/attr_code.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="31">
           <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/email.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example-go/src/constant/object.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="62">
+          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example-go/src/collection/linked_list.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1872">
+          <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
         </state>
       </provider>
     </entry>
