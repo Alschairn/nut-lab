@@ -97,6 +97,5 @@ func (self *LinkedList) deleteNode(node *LinkedListNode) bool {
 
 
 
-
 	return true
 }
