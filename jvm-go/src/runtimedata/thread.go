@@ -1,4 +1,4 @@
-package runtime
+package runtimedata
 
 type Thread struct {
 	pc    int
