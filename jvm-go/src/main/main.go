@@ -91,7 +91,6 @@ func testOperandStack(ops *runtimedata.OperandStack) {
 }
 
 
-
 func loadClass(className string, cp *classpath.Classpath) *classfile.ClassFile {
 	classData, _, err := cp.ReadClass(className)
 	if err != nil {
