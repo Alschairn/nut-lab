@@ -20,5 +20,28 @@ func main()  {
 	}
 
 	// 类型转换
+	var var1 int = 11
+
+	var2 := float64(var1)
+	var3 := float32(var1)
+
+	fmt.Printf("type change var1: %T -> %v, var2: %T -> %v, var3: %T -> %v\n", var1, var1, var2, var2, var3, var3)
+
+
+	// 函数调用
+
+
+
 }
 
+
+/**
+	平方根函数
+ */
+func Sqrt(x float64) float64 {
+	if x <= 0 {
+		panic("param must not be zero")
+	}
+
+
+}
