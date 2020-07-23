@@ -1,6 +1,7 @@
 /**
  * Description
  * <p>
+ *     判断是否是回文数
  * </p>
  * DATE 2020/7/23.
  *
@@ -8,12 +9,7 @@
  */
 public class Palindrome {
 
-    /**
-     * 判断是否是回文数
-     *
-     * @param x
-     * @return
-     */
+
     public static boolean isPalindrome(int x) {
         if (x < 0 || (x % 10 == 0 && x != 0)) { // 负数全部非回文数
             return false;

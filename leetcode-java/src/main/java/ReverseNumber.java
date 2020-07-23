@@ -1,6 +1,7 @@
 /**
  * Description
  * <p>
+ *     翻转数字
  * </p>
  * DATE 2020/7/23.
  *
@@ -8,12 +9,7 @@
  */
 public class ReverseNumber {
 
-    /**
-     * 翻转数字
-     *
-     * @param x
-     * @return
-     */
+
     public static int reverse(int x) {
         int rev = 0;
         while (x != 0) {
