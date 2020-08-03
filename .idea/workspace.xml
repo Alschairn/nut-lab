@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1a2b5486-52d5-465f-b99c-cb796af736c9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/example-shell/readme.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example-shell/src/base.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/bashsupport_project.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example-shell/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/example-shell/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example-shell/src/base.sh" beforeDir="false" afterPath="$PROJECT_DIR$/example-shell/src/base.sh" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -24,14 +25,14 @@
     <session id="-1041337711">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="6" />
+          <entry key="project.closed" value="7" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.2" value="1" />
-          <entry key="project.open.time.4" value="2" />
+          <entry key="project.open.time.4" value="3" />
           <entry key="project.open.time.5" value="3" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="9" />
+          <entry key="project.opened" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -39,31 +40,32 @@
           <entry key="gitignore" value="1" />
           <entry key="go" value="186" />
           <entry key="java" value="1" />
-          <entry key="md" value="10" />
-          <entry key="sh" value="5" />
+          <entry key="md" value="11" />
+          <entry key="sh" value="6" />
+          <entry key="txt" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Bash" value="4" />
+          <entry key="Bash" value="5" />
           <entry key="Git file" value="1" />
           <entry key="Go" value="186" />
-          <entry key="Markdown" value="1" />
-          <entry key="PLAIN_TEXT" value="11" />
+          <entry key="Markdown" value="2" />
+          <entry key="PLAIN_TEXT" value="12" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="go" value="24844" />
-          <entry key="md" value="501" />
-          <entry key="sh" value="408" />
+          <entry key="md" value="1223" />
+          <entry key="sh" value="750" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Bash" value="176" />
+          <entry key="Bash" value="518" />
           <entry key="Go" value="24844" />
-          <entry key="Markdown" value="206" />
+          <entry key="Markdown" value="928" />
           <entry key="PLAIN_TEXT" value="527" />
         </counts>
       </usages-collector>
@@ -76,23 +78,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/example-shell/src/base.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="62">
-              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/example-shell/readme.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="481">
-                <caret line="109" selection-start-line="109" selection-end-line="109" />
-              </first_editor>
-              <second_editor />
+            <state relative-caret-position="230">
+              <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -184,8 +174,8 @@
         <option value="$PROJECT_DIR$/jvm-go/src/instruction/instruction.go" />
         <option value="$PROJECT_DIR$/jvm-go/src/instruction/bytecode_reader.go" />
         <option value="$PROJECT_DIR$/jvm-go/src/instruction/constants/nop.go" />
-        <option value="$PROJECT_DIR$/example-shell/src/base.sh" />
         <option value="$PROJECT_DIR$/example-shell/readme.md" />
+        <option value="$PROJECT_DIR$/example-shell/src/base.sh" />
       </list>
     </option>
   </component>
@@ -216,7 +206,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -239,6 +228,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -283,7 +273,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Go Build.go build main.go (2)">
+  <component name="RunManager" selected="Bash.base.sh">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -359,6 +349,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="base.sh" type="BashConfigurationType" factoryName="Bash" temporary="true">
+      <module name="nut-lab" />
+      <option name="INTERPRETER_OPTIONS" value="bash" />
+      <option name="INTERPRETER_PATH" value="/usr/bin/env" />
+      <option name="PROJECT_INTERPRETER" value="false" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/example-shell/src" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/example-shell/src/base.sh" />
+      <option name="PARAMETERS" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="jvm-go.sh" type="BashConfigurationType" factoryName="Bash" temporary="true">
       <module name="nut-lab" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -375,14 +376,6 @@
       <working_directory value="$PROJECT_DIR$/.idea/modules" />
       <kind value="FILE" />
       <filePath value="$PROJECT_DIR$/jvm-go/src/classfile/constant_pool.go" />
-      <directory value="$PROJECT_DIR$/.idea/modules" />
-      <method v="2" />
-    </configuration>
-    <configuration name="go build main.go (1)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="nut-lab" />
-      <working_directory value="$PROJECT_DIR$/.idea/modules" />
-      <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/jvm-go/src/classpath/main.go" />
       <directory value="$PROJECT_DIR$/.idea/modules" />
       <method v="2" />
     </configuration>
@@ -403,19 +396,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Go Build.go build main.go (1)" />
       <item itemvalue="Go Build.go build main.go (2)" />
       <item itemvalue="Go Build.go build constant_pool.go" />
       <item itemvalue="Bash.jvm-go.sh" />
       <item itemvalue="Go Build.go build main.go (3)" />
+      <item itemvalue="Bash.base.sh" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Bash.base.sh" />
         <item itemvalue="Go Build.go build main.go (2)" />
         <item itemvalue="Go Build.go build main.go (3)" />
         <item itemvalue="Bash.jvm-go.sh" />
         <item itemvalue="Go Build.go build constant_pool.go" />
-        <item itemvalue="Go Build.go build main.go (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -449,7 +442,7 @@
     <frame x="0" y="23" width="1440" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.1874106" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18955651" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -458,7 +451,7 @@
       <window_info id="UI Designer" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3287841" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3287841" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3287841" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -495,13 +488,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/jvm-go/src/classfile/class_reader.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/jvm-go/src/classfile/member_info.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="253">
@@ -774,29 +760,33 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="434">
           <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <element signature="e#19#59#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/leetcode-java/src/main/java/Palindrome.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/example-shell/src/base.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="62">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/example-shell/readme.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="481">
-            <caret line="109" selection-start-line="109" selection-end-line="109" />
+          <first_editor relative-caret-position="-1580">
+            <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example-shell/src/temp.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example-shell/src/base.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
         </state>
       </provider>
     </entry>
