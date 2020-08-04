@@ -25,3 +25,6 @@ done
 cat ${BASE_PATH}/temp.txt
 
 rm -f ${BASE_PATH}/temp.txt
+
+read text
+echo ${text}
