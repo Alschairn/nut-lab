@@ -1,8 +1,17 @@
-package _map
+package main
+
+func main() {
+	node := &Node{
+		"string",
+		"stirng",
+		//nil,
+	}
+	result := node.isEquals("string")
+	print(result)
+}
 
 /**
 	放定址法（open addressing），也被称为封闭散列（closed hashing）实现HashMap
-	fixme 先搞string map，对象等到清楚泛型机制再搞
  */
 
 const (
@@ -14,7 +23,7 @@ type (
 	Node struct {
 		key   string
 		value string
-		next  Node
+		//next  Node
 	}
 
 	// 字典对象
@@ -24,8 +33,9 @@ type (
 	}
 )
 
+
 /**
-	节点判断value是否一致，
+	判断节点是否一致
  */
 func (node *Node) isEquals(value string) bool {
 	if len(node.value) != len(value) {
@@ -42,12 +52,19 @@ func (node *Node) isEquals(value string) bool {
 	return result == byte(0)
 }
 
+
 /**
 	获取一个新的HashMap集合，长度为默认长度
  */
 func New(size int) *HashMap {
 	return &HashMap{
-		nodeArr: make([]Node, 0),
-		size:    DefaultSize,
+		nodeArr: make([]Node, DefaultSize),
+		size:DefaultSize,
 	}
 }
+
+
+
+
+
+

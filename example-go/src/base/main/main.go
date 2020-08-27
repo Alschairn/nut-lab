@@ -30,19 +30,8 @@ func main()  {
 
 	// 函数调用
 
-
-
 }
 
 
-/**
-	平方根函数
- */
-func Sqrt(x float64) float64 {
-	if x <= 0 {
-		panic("param must not be zero")
-	}
 
 
-
-}
