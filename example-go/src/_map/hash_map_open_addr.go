@@ -134,7 +134,8 @@ func (hashMap *HashMap) Get(key string) string {
 		condition := true
 		for ; condition; {
 			// 判断hash是否一致，一致则返回对应value
-			if e.hash == keyHash && e.key == key {
+			if e.hash == keyHash &&
+				(e.key == key || (key != "" && hash(e.key) == keyHash)) {
 				return e.value
 			} else {
 				// 继续向下获取链表
