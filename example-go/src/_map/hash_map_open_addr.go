@@ -17,7 +17,7 @@ type (
 		hash  int
 		key   string
 		value string
-		next  Node
+		next  *Node
 	}
 
 	// 字典对象
@@ -81,10 +81,22 @@ func (node *Node) ToString() string {
 /**
 	获取一个新的HashMap集合，长度为默认长度
  */
-func New(size int) *HashMap {
+func NewHashMap(size int) *HashMap {
 	return &HashMap{
 		nodeArr: make([]Node, 0),
 		size:    DefaultSize,
+	}
+}
+
+/**
+	获取一个新的Node节点对象
+ */
+func NewNode(key string, value string, hash int) *Node {
+	return &Node{
+		key:   key,
+		value: value,
+		hash:  hash,
+		next:  nil,
 	}
 }
 
@@ -93,23 +105,45 @@ func New(size int) *HashMap {
  */
 func hash(key string) int {
 	h := int(crc32.ChecksumIEEE([]byte(key)))
-	// fixme 搞懂为什么这么操作
+	// fixme 搞懂为什么右移16位
 	return h ^ (h >> 16)
 }
 
+/**
+	获取指定key对应的value
+ */
 func (hashMap *HashMap) Get(key string) string {
+	// 如果当前数组为空或者map大小小于0，则返回空字符串
 	if hashMap.nodeArr != nil && hashMap.size > 0 {
-		hash := hash(key)
-		index := hash & (hashMap.size - 1)
-		first := hashMap.nodeArr[index]
-		if first.hash == hash {
+		keyHash := hash(key)                  // 获取查找key的hash值
+		index := keyHash & (hashMap.size - 1) // 计算hash值在数组中的下标
+		first := hashMap.nodeArr[index]       // 获取对应下标数据
+
+		// 如果hash值匹配，直接返回对应数据
+		if first.hash == keyHash &&
+			(first.key == key || (key != "" && hash(first.key) == keyHash)) {
 			return first.value
 		}
-		if first.next != nil
 
+		// 向后查找链表的下一个值
+		e := first.next
+		// 如果无值，则返回空
+		if e == nil {
+			return ""
+		}
+		condition := true
+		for ; condition; {
+			// 判断hash是否一致，一致则返回对应value
+			if e.hash == keyHash && e.key == key {
+				return e.value
+			} else {
+				// 继续向下获取链表
+				e = e.next
+			}
+			// 判断节点是否为空，为空则终止for循环，返回默认值
+			condition = e != nil
+		}
 	}
-
-
 	return ""
 }
 
