@@ -3,9 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="1a2b5486-52d5-465f-b99c-cb796af736c9" name="Default Changelist" comment="add: shell基础">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/example-go/src/_map/hash_map_open_addr.go" beforeDir="false" afterPath="$PROJECT_DIR$/example-go/src/_map/hash_map_open_addr.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/example-go/src/base/main/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/example-go/src/base/main/main.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/example-go/src/main/main.go" beforeDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/jvm-go/jvm-go.sh" beforeDir="false" afterPath="$PROJECT_DIR$/jvm-go/jvm-go.sh" afterDir="false" />
+>>>>>>> 583ef0800a7069d1601b07d01049b8210044c783
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -29,27 +33,47 @@
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.4" value="4" />
+<<<<<<< HEAD
           <entry key="project.open.time.5" value="4" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.8" value="1" />
           <entry key="project.opened" value="12" />
+=======
+          <entry key="project.open.time.5" value="3" />
+          <entry key="project.open.time.7" value="1" />
+          <entry key="project.open.time.8" value="1" />
+          <entry key="project.opened" value="11" />
+>>>>>>> 583ef0800a7069d1601b07d01049b8210044c783
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="gitignore" value="1" />
+<<<<<<< HEAD
           <entry key="go" value="204" />
           <entry key="java" value="1" />
           <entry key="md" value="11" />
           <entry key="sh" value="11" />
+=======
+          <entry key="go" value="187" />
+          <entry key="java" value="1" />
+          <entry key="md" value="11" />
+          <entry key="sh" value="10" />
+>>>>>>> 583ef0800a7069d1601b07d01049b8210044c783
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
+<<<<<<< HEAD
           <entry key="Bash" value="10" />
           <entry key="Git file" value="1" />
           <entry key="Go" value="204" />
+=======
+          <entry key="Bash" value="9" />
+          <entry key="Git file" value="1" />
+          <entry key="Go" value="187" />
+>>>>>>> 583ef0800a7069d1601b07d01049b8210044c783
           <entry key="Markdown" value="2" />
           <entry key="PLAIN_TEXT" value="12" />
         </counts>
@@ -58,13 +82,22 @@
         <counts>
           <entry key="go" value="27884" />
           <entry key="md" value="1223" />
+<<<<<<< HEAD
           <entry key="sh" value="1308" />
+=======
+          <entry key="sh" value="1135" />
+>>>>>>> 583ef0800a7069d1601b07d01049b8210044c783
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
+<<<<<<< HEAD
           <entry key="Bash" value="1076" />
           <entry key="Go" value="27884" />
+=======
+          <entry key="Bash" value="903" />
+          <entry key="Go" value="24844" />
+>>>>>>> 583ef0800a7069d1601b07d01049b8210044c783
           <entry key="Markdown" value="928" />
           <entry key="PLAIN_TEXT" value="527" />
         </counts>
@@ -82,15 +115,23 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/example-go/src/_map/hash_map_open_addr.go">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="3067">
               <caret line="106" column="9" lean-forward="true" selection-start-line="106" selection-start-column="9" selection-end-line="106" selection-end-column="9" />
+=======
+        <entry file="file://$PROJECT_DIR$/jvm-go/jvm-go.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="248">
+              <caret line="8" column="39" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
+>>>>>>> 583ef0800a7069d1601b07d01049b8210044c783
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file:///usr/local/go/src/builtin/builtin.go">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="260">
@@ -134,6 +175,12 @@
               <folding>
                 <element signature="e#14#45#0" expanded="true" />
               </folding>
+=======
+        <entry file="file://$PROJECT_DIR$/example-shell/src/base.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="31">
+              <caret line="1" selection-start-line="1" selection-end-line="1" />
+>>>>>>> 583ef0800a7069d1601b07d01049b8210044c783
             </state>
           </provider>
         </entry>
@@ -177,6 +224,20 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+<<<<<<< HEAD
+=======
+        <option value="$PROJECT_DIR$/jvm-go/src/classfile/attr_exceptions.go" />
+        <option value="$PROJECT_DIR$/jvm-go/src/classfile/attr_line_table.go" />
+        <option value="$PROJECT_DIR$/jvm-go/src/classfile/attr_local_variable_table.go" />
+        <option value="$PROJECT_DIR$/jvm-go/src/classfile/class_reader.go" />
+        <option value="$PROJECT_DIR$/jvm-go/src/classfile/constant_pool.go" />
+        <option value="$PROJECT_DIR$/jvm-go/src/classfile/member_info.go" />
+        <option value="$PROJECT_DIR$/jvm-go/src/classfile/attribute_info.go" />
+        <option value="$PROJECT_DIR$/jvm-go/src/classfile/attr_source_file.go" />
+        <option value="$PROJECT_DIR$/jvm-go/src/classfile/attr_constant_value.go" />
+        <option value="$PROJECT_DIR$/jvm-go/src/classfile/class_file.go" />
+        <option value="$PROJECT_DIR$/example-go/src/map/current_hash_map.go" />
+>>>>>>> 583ef0800a7069d1601b07d01049b8210044c783
         <option value="$PROJECT_DIR$/example-go/jvm-go.sh" />
         <option value="$PROJECT_DIR$/jvm-go/src/classfile/attr_code.go" />
         <option value="$PROJECT_DIR$/example-go/src/map/hash_map_open_hashing.go" />
@@ -216,6 +277,7 @@
         <option value="$PROJECT_DIR$/example-shell/src/base.sh" />
         <option value="$PROJECT_DIR$/example-shell/src/lib/email.sh" />
         <option value="$PROJECT_DIR$/jvm-go/jvm-go.sh" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/example-py/src/jieba.py" />
         <option value="$PROJECT_DIR$/example-py/src/part_of_speech.py" />
         <option value="$PROJECT_DIR$/example-py/src/synonyms_test.py" />
@@ -228,6 +290,8 @@
         <option value="$PROJECT_DIR$/example-go/src/main/main.go" />
         <option value="$PROJECT_DIR$/example-go/src/base/main/main.go" />
         <option value="$PROJECT_DIR$/example-go/src/_map/hash_map_open_addr.go" />
+=======
+>>>>>>> 583ef0800a7069d1601b07d01049b8210044c783
       </list>
     </option>
   </component>
@@ -273,30 +337,48 @@
             <path>
               <item name="nut-lab" type="b2602c69:ProjectViewProjectNode" />
               <item name="nut-lab" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
               <item name="example-go" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+=======
+              <item name="example-shell" type="462c0819:PsiDirectoryNode" />
+>>>>>>> 583ef0800a7069d1601b07d01049b8210044c783
             </path>
             <path>
               <item name="nut-lab" type="b2602c69:ProjectViewProjectNode" />
               <item name="nut-lab" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
               <item name="example-go" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="_map" type="462c0819:PsiDirectoryNode" />
+=======
+              <item name="example-shell" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+>>>>>>> 583ef0800a7069d1601b07d01049b8210044c783
             </path>
             <path>
               <item name="nut-lab" type="b2602c69:ProjectViewProjectNode" />
               <item name="nut-lab" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
               <item name="example-go" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="base" type="462c0819:PsiDirectoryNode" />
+=======
+              <item name="jvm-go" type="462c0819:PsiDirectoryNode" />
+>>>>>>> 583ef0800a7069d1601b07d01049b8210044c783
             </path>
             <path>
               <item name="nut-lab" type="b2602c69:ProjectViewProjectNode" />
               <item name="nut-lab" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
               <item name="example-go" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="base" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+=======
+              <item name="jvm-go" type="462c0819:PsiDirectoryNode" />
+              <item name="bin" type="462c0819:PsiDirectoryNode" />
+>>>>>>> 583ef0800a7069d1601b07d01049b8210044c783
             </path>
           </expand>
           <select />
@@ -347,7 +429,11 @@
       </list>
     </option>
   </component>
+<<<<<<< HEAD
   <component name="RunManager" selected="Go Build.go build main.go (1)">
+=======
+  <component name="RunManager" selected="Bash.jvm-go.sh">
+>>>>>>> 583ef0800a7069d1601b07d01049b8210044c783
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -423,12 +509,46 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+<<<<<<< HEAD
     <configuration name="go build main.go (1)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="nut-lab" />
       <working_directory value="$PROJECT_DIR$/.idea/modules" />
       <kind value="FILE" />
       <filePath value="$PROJECT_DIR$/example-go/src/base/main/main.go" />
       <directory value="$PROJECT_DIR$/.idea/modules" />
+=======
+    <configuration name="base.sh" type="BashConfigurationType" factoryName="Bash" temporary="true">
+      <module name="nut-lab" />
+      <option name="INTERPRETER_OPTIONS" value="bash" />
+      <option name="INTERPRETER_PATH" value="/usr/bin/env" />
+      <option name="PROJECT_INTERPRETER" value="false" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/example-shell/src" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/example-shell/src/base.sh" />
+      <option name="PARAMETERS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="email.sh" type="BashConfigurationType" factoryName="Bash" temporary="true">
+      <module name="nut-lab" />
+      <option name="INTERPRETER_OPTIONS" value="bash" />
+      <option name="INTERPRETER_PATH" value="/usr/bin/env" />
+      <option name="PROJECT_INTERPRETER" value="false" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/example-shell/src/lib" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/example-shell/src/lib/email.sh" />
+      <option name="PARAMETERS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="jvm-go.sh" type="BashConfigurationType" factoryName="Bash" temporary="true">
+      <module name="nut-lab" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="INTERPRETER_PATH" value="/bin/bash" />
+      <option name="PROJECT_INTERPRETER" value="false" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/jvm-go" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/jvm-go/jvm-go.sh" />
+      <option name="PARAMETERS" value="" />
+>>>>>>> 583ef0800a7069d1601b07d01049b8210044c783
       <method v="2" />
     </configuration>
     <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
@@ -457,6 +577,7 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
+<<<<<<< HEAD
     <configuration name="jieba" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -501,6 +622,20 @@
       <list>
         <item itemvalue="Go Build.go build main.go (1)" />
         <item itemvalue="Go Build.go build main.go" />
+=======
+    <list>
+      <item itemvalue="Go Build.go build main.go (2)" />
+      <item itemvalue="Go Build.go build main.go (3)" />
+      <item itemvalue="Bash.email.sh" />
+      <item itemvalue="Bash.base.sh" />
+      <item itemvalue="Bash.jvm-go.sh" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Bash.jvm-go.sh" />
+        <item itemvalue="Bash.base.sh" />
+        <item itemvalue="Bash.email.sh" />
+>>>>>>> 583ef0800a7069d1601b07d01049b8210044c783
       </list>
     </recent_temporary>
   </component>
@@ -542,20 +677,34 @@
     <frame x="0" y="23" width="1440" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
+<<<<<<< HEAD
       <window_info content_ui="combo" id="Project" order="0" weight="0.2532189" />
+=======
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2532189" />
+>>>>>>> 583ef0800a7069d1601b07d01049b8210044c783
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="0" />
+<<<<<<< HEAD
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.50992554" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3995037" />
+=======
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3287841" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3287841" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+>>>>>>> 583ef0800a7069d1601b07d01049b8210044c783
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" />
       <window_info anchor="bottom" id="Version Control" order="8" />
+<<<<<<< HEAD
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.3287841" />
+=======
+      <window_info anchor="bottom" id="Terminal" order="9" />
+>>>>>>> 583ef0800a7069d1601b07d01049b8210044c783
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="11" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -574,6 +723,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add: shell基础" />
     <option name="LAST_COMMIT_MESSAGE" value="add: shell基础" />
+<<<<<<< HEAD
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
@@ -605,34 +755,68 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="31">
           <caret line="1" selection-start-line="1" selection-end-line="1" />
+=======
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/jvm-go/src/classfile/member_info.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jvm-go/src/classfile/constant_pool.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="4" column="5" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
+>>>>>>> 583ef0800a7069d1601b07d01049b8210044c783
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/example-go/src/_collection/double_linked_list.go">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="93">
           <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
+=======
+        <state relative-caret-position="279">
+          <caret line="9" column="34" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
+>>>>>>> 583ef0800a7069d1601b07d01049b8210044c783
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/example-go/src/_collection/array_list.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="93">
+<<<<<<< HEAD
           <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
+=======
+          <caret line="3" column="11" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
+>>>>>>> 583ef0800a7069d1601b07d01049b8210044c783
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/example-go/src/_collection/linked_list.go">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="93">
           <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
+=======
+        <state relative-caret-position="279">
+          <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+>>>>>>> 583ef0800a7069d1601b07d01049b8210044c783
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/example-go/src/_collection/skip_list.go">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="93">
           <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+=======
+        <state relative-caret-position="31">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+>>>>>>> 583ef0800a7069d1601b07d01049b8210044c783
         </state>
       </provider>
     </entry>
@@ -641,86 +825,146 @@
     <entry file="file://$PROJECT_DIR$/example-go/src/base/base_oop.go" />
     <entry file="file://$PROJECT_DIR$/example-go/readme.md">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="186">
           <caret line="6" column="11" lean-forward="true" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
+=======
+        <state relative-caret-position="1860">
+          <caret line="60" column="26" selection-start-line="60" selection-start-column="26" selection-end-line="60" selection-end-column="26" />
+>>>>>>> 583ef0800a7069d1601b07d01049b8210044c783
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/email.sh">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="93">
           <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+=======
+        <state relative-caret-position="248">
+          <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
+>>>>>>> 583ef0800a7069d1601b07d01049b8210044c783
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/readme.md">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="186">
           <caret line="6" column="8" lean-forward="true" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
+=======
+        <state relative-caret-position="465">
+          <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
+>>>>>>> 583ef0800a7069d1601b07d01049b8210044c783
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jvm-go/src/classfile/attr_source_file.go">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="124">
           <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
+=======
+        <state relative-caret-position="62">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+>>>>>>> 583ef0800a7069d1601b07d01049b8210044c783
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jvm-go/src/classfile/cp_invoke_dynamic.go">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="372">
           <caret line="12" column="31" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
+=======
+        <state relative-caret-position="496">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+>>>>>>> 583ef0800a7069d1601b07d01049b8210044c783
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/example-go/src/base/base_go.go" />
     <entry file="file://$PROJECT_DIR$/jvm-go/src/classpath/classpath.go">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="31">
           <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+=======
+        <state relative-caret-position="263">
+          <caret line="48" column="5" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
+>>>>>>> 583ef0800a7069d1601b07d01049b8210044c783
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jvm-go/src/classpath/cmd.go">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="-171">
           <caret line="28" column="25" selection-start-line="28" selection-start-column="25" selection-end-line="28" selection-end-column="25" />
+=======
+        <state relative-caret-position="260">
+          <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+>>>>>>> 583ef0800a7069d1601b07d01049b8210044c783
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jvm-go/src/classpath/entry_dir.go">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="775">
           <caret line="29" column="22" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
+=======
+        <state relative-caret-position="31">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+>>>>>>> 583ef0800a7069d1601b07d01049b8210044c783
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jvm-go/src/classfile/class_file.go">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="1178">
           <caret line="38" column="62" selection-start-line="38" selection-start-column="62" selection-end-line="38" selection-end-column="62" />
+=======
+        <state relative-caret-position="93">
+          <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
+>>>>>>> 583ef0800a7069d1601b07d01049b8210044c783
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jvm-go/src/main/main.go">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="310">
           <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
+=======
+        <state relative-caret-position="93">
+          <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
+>>>>>>> 583ef0800a7069d1601b07d01049b8210044c783
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="31">
           <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+=======
+        <state relative-caret-position="93">
+          <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
+>>>>>>> 583ef0800a7069d1601b07d01049b8210044c783
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jvm-go/src/instruction/instruction.go">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="309">
           <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+=======
+        <state relative-caret-position="93">
+          <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+>>>>>>> 583ef0800a7069d1601b07d01049b8210044c783
         </state>
       </provider>
     </entry>
@@ -733,8 +977,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/jvm-go/src/instruction/constants/nop.go">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="434">
           <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+=======
+        <state relative-caret-position="93">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+>>>>>>> 583ef0800a7069d1601b07d01049b8210044c783
         </state>
       </provider>
     </entry>
@@ -750,23 +999,38 @@
     <entry file="file://$PROJECT_DIR$/example-shell/src/lib/email.sh" />
     <entry file="file://$PROJECT_DIR$/jvm-go/jvm-go.sh">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="279">
           <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+=======
+        <state relative-caret-position="124">
+          <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
+>>>>>>> 583ef0800a7069d1601b07d01049b8210044c783
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/example-shell/src/base.sh">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="31">
           <caret line="1" selection-start-line="1" selection-end-line="1" />
+=======
+        <state relative-caret-position="372">
+          <caret line="12" column="31" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
+>>>>>>> 583ef0800a7069d1601b07d01049b8210044c783
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/example-py/src/part_of_speech.py" />
     <entry file="file://$USER_HOME$/Library/Caches/PyCharm2017.2/python_stubs/534773319/builtins.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="-2042">
           <caret line="4943" column="23" lean-forward="true" selection-start-line="4943" selection-start-column="23" selection-end-line="4943" selection-end-column="23" />
+=======
+        <state relative-caret-position="31">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+>>>>>>> 583ef0800a7069d1601b07d01049b8210044c783
         </state>
       </provider>
     </entry>
@@ -776,15 +1040,25 @@
     <entry file="file://$PROJECT_DIR$/example-py/src/controller/hello.py" />
     <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/jieba/posseg/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="126">
           <caret line="272" column="4" selection-start-line="272" selection-start-column="4" selection-end-line="272" selection-end-column="4" />
+=======
+        <state relative-caret-position="-171">
+          <caret line="28" column="25" selection-start-line="28" selection-start-column="25" selection-end-line="28" selection-end-column="25" />
+>>>>>>> 583ef0800a7069d1601b07d01049b8210044c783
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/example-py/src/analyzer/word_splitter.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="248">
           <caret line="8" column="15" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
+=======
+        <state relative-caret-position="775">
+          <caret line="29" column="22" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
+>>>>>>> 583ef0800a7069d1601b07d01049b8210044c783
         </state>
       </provider>
     </entry>
@@ -797,8 +1071,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/example-py/src/analyzer/sentence_splitter.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="155">
           <caret line="5" selection-start-line="5" selection-end-line="5" />
+=======
+        <state relative-caret-position="1178">
+          <caret line="38" column="62" selection-start-line="38" selection-start-column="62" selection-end-line="38" selection-end-column="62" />
+>>>>>>> 583ef0800a7069d1601b07d01049b8210044c783
         </state>
       </provider>
     </entry>
@@ -811,6 +1090,7 @@
     </entry>
     <entry file="file:///usr/local/go/src/go/types/object.go">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="558">
           <caret line="23" column="23" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
         </state>
@@ -820,46 +1100,76 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-388">
           <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+=======
+        <state relative-caret-position="155">
+          <caret line="5" selection-start-line="5" selection-end-line="34" selection-end-column="1" />
+>>>>>>> 583ef0800a7069d1601b07d01049b8210044c783
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/example-go/src/_map/hash_map_separate_chaining.go">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state>
           <caret column="11" selection-start-column="11" selection-end-column="11" />
+=======
+        <state relative-caret-position="93">
+          <caret line="3" column="82" selection-start-line="3" selection-start-column="82" selection-end-line="3" selection-end-column="82" />
+>>>>>>> 583ef0800a7069d1601b07d01049b8210044c783
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/example-go/src/main/main.go">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="954">
           <caret line="48" column="32" selection-start-line="48" selection-start-column="32" selection-end-line="48" selection-end-column="32" />
+=======
+        <state relative-caret-position="310">
+          <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
+>>>>>>> 583ef0800a7069d1601b07d01049b8210044c783
         </state>
       </provider>
     </entry>
     <entry file="file:///usr/local/go/src/hash/crc32/crc32.go">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="260">
           <caret line="250" column="5" selection-start-line="250" selection-start-column="5" selection-end-line="250" selection-end-column="5" />
+=======
+        <state relative-caret-position="31">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+>>>>>>> 583ef0800a7069d1601b07d01049b8210044c783
         </state>
       </provider>
     </entry>
     <entry file="file:///usr/local/go/src/crypto/sha1/sha1.go">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="260">
           <caret line="120" column="5" selection-start-line="120" selection-start-column="5" selection-end-line="120" selection-end-column="5" />
+=======
+        <state relative-caret-position="309">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+>>>>>>> 583ef0800a7069d1601b07d01049b8210044c783
         </state>
       </provider>
     </entry>
     <entry file="file:///usr/local/go/src/hash/hash.go">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="253">
           <caret line="32" column="4" selection-start-line="32" selection-start-column="4" selection-end-line="32" selection-end-column="4" />
+=======
+        <state relative-caret-position="573">
+          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
+>>>>>>> 583ef0800a7069d1601b07d01049b8210044c783
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/example-go/src/base/main/main.go">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="176">
           <caret line="39" column="19" selection-start-line="39" selection-start-column="19" selection-end-line="39" selection-end-column="19" />
           <folding>
@@ -879,6 +1189,47 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3067">
           <caret line="106" column="9" lean-forward="true" selection-start-line="106" selection-start-column="9" selection-end-line="106" selection-end-column="9" />
+=======
+        <state relative-caret-position="434">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example-shell/readme.md" />
+    <entry file="file://$PROJECT_DIR$/example-shell/src/temp.txt" />
+    <entry file="file://$PROJECT_DIR$/leetcode-java/src/main/java/Palindrome.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example-go/src/base/main/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1200">
+          <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example-shell/src/lib/email.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="8" column="47" lean-forward="true" selection-start-line="8" selection-start-column="47" selection-end-line="8" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example-shell/src/base.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="31">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jvm-go/jvm-go.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="8" column="39" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
+>>>>>>> 583ef0800a7069d1601b07d01049b8210044c783
         </state>
       </provider>
     </entry>
