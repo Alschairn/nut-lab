@@ -142,30 +142,54 @@ func (hashMap *HashMap) Put(key string, value string) {
 
 }
 
-func (hashMap *HashMap) PutAll(tMap HashMap) {
-
-}
+//func (hashMap *HashMap) PutAll(tMap HashMap) {
+//
+//}
 
 func (hashMap *HashMap) Remove(key string) string {
+
 	return ""
 }
 
 func (hashMap *HashMap) Clear() {
-
+	if hashMap.nodeArr != nil && hashMap.size > 0 {
+		hashMap.size = 0
+		for n := range hashMap.nodeArr {
+			// 遍历数组，将指针置为nil
+			&n = nil
+		}
+	}
 }
 
 func (hashMap *HashMap) Size() int {
 	return hashMap.size
 }
 
-func (hashMap *HashMap) ContainsKey(key string) bool {
+func (hashMap *HashMap) ContainsKey(k string) bool {
 	return false
 }
 
-func (hashMap *HashMap) ContainsValue(value string) bool {
+func (hashMap *HashMap) ContainsValue(v string) bool {
+	if hashMap.nodeArr != nil && hashMap.size > 0 {
+		for i := 0; i < len(hashMap.nodeArr); i++ {
+			for node := hashMap.nodeArr[i]; &node != nil; node = *node.next {
+				if node.value == v ||
+					(&node.value != nil && hash(node.value) == hash(v)) {
+					return true
+				}
+			}
+		}
+	}
 	return false
 }
 
 func (hashMap *HashMap) Values() []string {
-	return nil
+	re := make([]string, hashMap.size)
+	for i,a := 0,0; i < len(hashMap.nodeArr); i++ {
+		for node := hashMap.nodeArr[i]; &node != nil; node = *node.next {
+			re[a] = node.value
+			a++
+		}
+	}
+	return re
 }
