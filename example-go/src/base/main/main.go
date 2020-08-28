@@ -1,9 +1,5 @@
 package main
 
-import (
-	"hash/crc32"
-)
-
 func main()  {
 	//
 	//fmt.Printf("hello world! \n")
@@ -32,12 +28,14 @@ func main()  {
 
 	// 函数调用
 
-	h := int(crc32.ChecksumIEEE([]byte("1")))
-	print("\n\n")
-	hash := int(h ^ (h >> 16))
-	print(hash)
-	print("\n")
-	print(hash & 11)
+	//h := int(crc32.ChecksumIEEE([]byte("1")))
+	//print("\n\n")
+	//hash := int(h ^ (h >> 16))
+	//print(hash)
+	//print("\n")
+	//print(hash & 11)
+
+
 
 
 

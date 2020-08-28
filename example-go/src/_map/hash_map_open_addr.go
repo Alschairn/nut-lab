@@ -1,6 +1,9 @@
 package _map
 
-import "hash/crc32"
+import (
+	"errors"
+	"hash/crc32"
+)
 
 /**
 	放定址法（open addressing），也被称为封闭散列（closed hashing）实现HashMap
@@ -8,22 +11,24 @@ import "hash/crc32"
  */
 
 const (
-	DefaultSize = 8 // 默认长度
+	DefaultSize       = 8    // 默认长度
+	DefaultLoadFactor = 0.75 // 默认加载因子
 )
 
 type (
 	// 节点数据
 	Node struct {
-		hash  int
-		key   string
-		value string
-		next  *Node
+		hash  int    // hash值
+		key   string // 键
+		value string // 值
+		next  *Node  // 下一节点
 	}
 
 	// 字典对象
 	HashMap struct {
-		nodeArr []Node
-		size    int
+		nodeArr    []Node  // 节点数据存储
+		size       int     // 当前长度
+		loadFactor float32 // 加载因子
 	}
 )
 
@@ -31,33 +36,23 @@ type (
 	节点判断value是否一致，
  */
 func (node *Node) IsEquals(value string) bool {
+	// 如果长度不一致，则认定为值不匹配
 	if len(node.value) != len(value) {
 		return false
 	}
-	_1 := []byte(node.value)
-	_2 := []byte(value)
-	length := len(node.value)
-
-	result := byte(0)
-	for i := 0; i < length; i++ {
-		result |= _1[i] ^ _2[i]
+	// 分解为byte数组，对同下标byte做异与操作，通过判断re是否有变化来计算是否一致，避免了定时攻击
+	a, b, re := []byte(node.value), []byte(value), byte(0)
+	for i := 0; i < len(value); i++ {
+		re |= a[i] ^ b[i]
 	}
-	return result == byte(0)
+	return re == byte(0)
 }
 
 /**
 	获取hashcode
  */
 func (node *Node) HashCode() int {
-	key := int(crc32.ChecksumIEEE([]byte(node.key)))
-	value := int(crc32.ChecksumIEEE([]byte(node.value)))
-	if -key >= 0 {
-		key = -key
-	}
-	if -value >= 0 {
-		value = -value
-	}
-	return key ^ value
+	return int(crc32.ChecksumIEEE([]byte(node.key))) ^ int(crc32.ChecksumIEEE([]byte(node.value)))
 }
 
 func (node *Node) SetValue(value string) string {
@@ -81,10 +76,11 @@ func (node *Node) ToString() string {
 /**
 	获取一个新的HashMap集合，长度为默认长度
  */
-func NewHashMap(size int) *HashMap {
+func NewHashMap() *HashMap {
 	return &HashMap{
-		nodeArr: make([]Node, 0),
-		size:    DefaultSize,
+		nodeArr:    make([]Node, DefaultSize), // 构建一个默认长度的数组
+		size:       DefaultSize,               // 设置默认长度
+		loadFactor: DefaultLoadFactor,         // 设置默认加载因子
 	}
 }
 
@@ -93,10 +89,10 @@ func NewHashMap(size int) *HashMap {
  */
 func NewNode(key string, value string, hash int) *Node {
 	return &Node{
-		key:   key,
-		value: value,
-		hash:  hash,
-		next:  nil,
+		key:   key,   // 设置键
+		value: value, // 设置值
+		hash:  hash,  // 设置hash
+		next:  nil,   // 将指针指向nil
 	}
 }
 
@@ -112,40 +108,34 @@ func hash(key string) int {
 /**
 	获取指定key对应的value
  */
-func (hashMap *HashMap) Get(key string) string {
+func (hashMap *HashMap) Get(key string) (string, error) {
 	// 如果当前数组为空或者map大小小于0，则返回空字符串
 	if hashMap.nodeArr != nil && hashMap.size > 0 {
-		keyHash := hash(key)                  // 获取查找key的hash值
-		index := keyHash & (hashMap.size - 1) // 计算hash值在数组中的下标
-		first := hashMap.nodeArr[index]       // 获取对应下标数据
+		kh := hash(key)                            // 获取查找key的hash值
+		f := hashMap.nodeArr[kh&(hashMap.size-1) ] // 获取对应下标数据
 
-		// 如果hash值匹配，直接返回对应数据
-		if first.hash == keyHash &&
-			(first.key == key || (key != "" && hash(first.key) == keyHash)) {
-			return first.value
+		// 如果hash值匹配，直接返回对应数据，这里检测了node节点的hash值和node节点key的hash值
+		if f.hash == kh &&
+			(f.key == key || (key != "" && hash(f.key) == kh)) {
+			return f.value, nil
 		}
 
-		// 向后查找链表的下一个值
-		e := first.next
-		// 如果无值，则返回空
-		if e == nil {
-			return ""
+		// 如果链表无下一节点，则返回空
+		if f.next == nil {
+			return "", errors.New("is empty")
 		}
-		condition := true
+
+		e, condition := f.next, true
 		for ; condition; {
-			// 判断hash是否一致，一致则返回对应value
-			if e.hash == keyHash &&
-				(e.key == key || (key != "" && hash(e.key) == keyHash)) {
-				return e.value
-			} else {
-				// 继续向下获取链表
-				e = e.next
+			// 判断hash是否一致，一致则返回对应value，hash检测逻辑同上
+			if e.hash == kh &&
+				(e.key == key || (key != "" && hash(e.key) == kh)) {
+				return e.value, nil
 			}
-			// 判断节点是否为空，为空则终止for循环，返回默认值
-			condition = e != nil
+			e, condition = e.next, e.next != nil // 查找链表的下一值，这里如果无next，condition条件会终止for循环
 		}
 	}
-	return ""
+	return "", errors.New("is empty")
 }
 
 func (hashMap *HashMap) Put(key string, value string) {
