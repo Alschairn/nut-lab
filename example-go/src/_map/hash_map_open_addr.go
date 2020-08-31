@@ -28,6 +28,7 @@ type (
 		nodeArr    []Node  // 节点数据存储
 		size       int     // 当前长度
 		loadFactor float32 // 加载因子
+		threshold  int     // 最大长度
 	}
 )
 
@@ -135,7 +136,7 @@ func (hashMap *HashMap) Get(key string) (string, error) {
 		}
 
 		e := f.next
-		for condition:=true; condition||e.next != nil; condition=false {
+		for condition := true; condition || e.next != nil; condition = false {
 			// 判断hash是否一致，一致则返回对应value，hash检测逻辑同上
 			if e.hash == kh &&
 				(e.key == key || (key != "" && hash(e.key) == kh)) {
@@ -147,9 +148,50 @@ func (hashMap *HashMap) Get(key string) (string, error) {
 	return "", errors.New("is empty")
 }
 
-func (hashMap *HashMap) Put(key string, value string) {
-
+func (hashMap *HashMap) Put(key string, value string) string {
+	var n int
+	if hashMap.nodeArr == nil || n == 0 {
+		n = len(hashMap.resize())
+	} else {
+		n = hashMap.size
+	}
+	kh := hash(key)
+	idx := kh & (n - 1)
+	if &hashMap.nodeArr[idx] == nil {
+		hashMap.nodeArr[idx] = *NewNode(key, value, kh)
+	} else {
+		e := hashMap.nodeArr[idx]
+		if e.hash == kh && e.key == key { // 首节点即为需要插入节点
+			e.SetValue(value)
+		} else {
+			t := e.next
+			for condition := true; condition || t != nil; t = t.next {
+				if t == nil {
+					e.next = NewNode(key, value, kh)
+					break
+				}
+				if t.hash == kh && t.key == key {
+					oldValue := t.SetValue(value)
+					return oldValue
+				}
+				condition = false
+			}
+		}
+	}
+	hashMap.size++
+	if hashMap.size > hashMap.threshold {
+		hashMap.resize()
+	}
+	return ""
 }
+
+
+func (hashMap *HashMap) resize() []Node {
+
+	return nil
+}
+
+
 
 /**
 	删除指定key
