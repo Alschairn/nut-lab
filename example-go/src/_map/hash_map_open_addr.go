@@ -148,6 +148,9 @@ func (hashMap *HashMap) Get(key string) (string, error) {
 	return "", errors.New("is empty")
 }
 
+/**
+	添加
+ */
 func (hashMap *HashMap) Put(key string, value string) string {
 	var n int
 	if hashMap.nodeArr == nil || n == 0 {
