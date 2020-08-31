@@ -134,14 +134,14 @@ func (hashMap *HashMap) Get(key string) (string, error) {
 			return "", errors.New("is empty")
 		}
 
-		e, condition := f.next, true
-		for ; condition; {
+		e := f.next
+		for condition:=true; condition||e.next != nil; condition=false {
 			// 判断hash是否一致，一致则返回对应value，hash检测逻辑同上
 			if e.hash == kh &&
 				(e.key == key || (key != "" && hash(e.key) == kh)) {
 				return e.value, nil
 			}
-			e, condition = e.next, e.next != nil // 查找链表的下一值，这里如果无next，condition条件会终止for循环
+			e = e.next // 查找链表的下一值，这里如果无next，condition条件会终止for循环
 		}
 	}
 	return "", errors.New("is empty")
