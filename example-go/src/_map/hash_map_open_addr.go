@@ -6,8 +6,7 @@ import (
 )
 
 /**
-	放定址法（open addressing），也被称为封闭散列（closed hashing）实现HashMap
-	fixme 先搞string map，对象等到清楚泛型机制再搞
+	open addressing，也被称为封闭散列（closed hashing）实现HashMap
  */
 
 const (
@@ -31,6 +30,10 @@ type (
 		loadFactor float32 // 加载因子
 	}
 )
+
+/***********************************************************************************************************
+										node function
+ ***********************************************************************************************************/
 
 /**
 	节点判断value是否一致，
@@ -73,6 +76,10 @@ func (node *Node) ToString() string {
 	return node.key + "=" + node.value
 }
 
+/***********************************************************************************************************
+										public function
+ ***********************************************************************************************************/
+
 /**
 	获取一个新的HashMap集合，长度为默认长度
  */
@@ -101,10 +108,12 @@ func NewNode(key string, value string, hash int) *Node {
  */
 func hash(key string) int {
 	h := int(crc32.ChecksumIEEE([]byte(key)))
-	// fixme 搞懂为什么右移16位
 	return h ^ (h >> 16)
 }
 
+/***********************************************************************************************************
+										hashMap function
+ ***********************************************************************************************************/
 /**
 	获取指定key对应的value
  */
@@ -142,15 +151,17 @@ func (hashMap *HashMap) Put(key string, value string) {
 
 }
 
-//func (hashMap *HashMap) PutAll(tMap HashMap) {
-//
-//}
-
+/**
+	删除指定key
+ */
 func (hashMap *HashMap) Remove(key string) string {
 
 	return ""
 }
 
+/**
+	清空Map
+ */
 func (hashMap *HashMap) Clear() {
 	if hashMap.nodeArr != nil && hashMap.size > 0 {
 		hashMap.size = 0
@@ -161,14 +172,24 @@ func (hashMap *HashMap) Clear() {
 	}
 }
 
+/**
+	获取当前map长度
+ */
 func (hashMap *HashMap) Size() int {
 	return hashMap.size
 }
 
+/**
+	判断是否包含key
+ */
 func (hashMap *HashMap) ContainsKey(k string) bool {
-	return false
+	_, err := hashMap.Get(k)
+	return err == nil
 }
 
+/**
+	判断是否包含指定值
+ */
 func (hashMap *HashMap) ContainsValue(v string) bool {
 	if hashMap.nodeArr != nil && hashMap.size > 0 {
 		for i := 0; i < len(hashMap.nodeArr); i++ {
@@ -183,9 +204,12 @@ func (hashMap *HashMap) ContainsValue(v string) bool {
 	return false
 }
 
+/**
+	获取值数组
+ */
 func (hashMap *HashMap) Values() []string {
 	re := make([]string, hashMap.size)
-	for i,a := 0,0; i < len(hashMap.nodeArr); i++ {
+	for i, a := 0, 0; i < len(hashMap.nodeArr); i++ {
 		for node := hashMap.nodeArr[i]; &node != nil; node = *node.next {
 			re[a] = node.value
 			a++
