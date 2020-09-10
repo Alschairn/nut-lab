@@ -10,8 +10,10 @@ import (
  */
 
 const (
-	DefaultSize       = 8    // 默认长度
-	DefaultLoadFactor = 0.75 // 默认加载因子
+	DefaultSize            = 8       // 默认长度
+	DefaultLoadFactor      = 0.75    // 默认加载因子
+	DefaultInitialCapacity = 1 << 4  // 默认长度 16
+	MaximumCapacity        = 1 << 30 // 最大长度
 )
 
 type (
@@ -188,13 +190,84 @@ func (hashMap *HashMap) Put(key string, value string) string {
 	return ""
 }
 
-
 func (hashMap *HashMap) resize() []Node {
+	oldCap := hashMap.size
+	oldThr := hashMap.threshold
+	oldTab := hashMap.nodeArr
 
-	return nil
+	newCap, newThr := 0, 0
+	if oldCap > 0 {
+		newCap = oldCap << 1
+		if oldCap >= MaximumCapacity {
+			hashMap.threshold = 0x7fffffff
+			return hashMap.nodeArr
+		} else if newCap < MaximumCapacity && oldCap > DefaultInitialCapacity {
+			newThr = oldThr << 1
+		}
+	} else if oldThr > 0 {
+		newCap = oldThr
+	} else {
+		newCap = DefaultInitialCapacity
+		newThr = DefaultLoadFactor * DefaultInitialCapacity
+	}
+
+
+	if newThr == 0 {
+		ft := float32(newCap) * hashMap.loadFactor
+		if newCap < MaximumCapacity && ft < float32(MaximumCapacity) {
+			newThr = int(ft)
+		} else {
+			newThr = 0x7fffffff
+		}
+	}
+
+	hashMap.threshold = newThr
+	hashMap.nodeArr = make([]Node, newCap)
+
+	if oldTab != nil {
+		oldLen := len(oldTab)
+		for i := 0; i < oldLen; i++  {
+			if &oldTab[i] != nil {
+				e := &oldTab[i]
+				&oldTab[i] = nil
+				if e.next == nil {
+					hashMap.nodeArr[e.hash & (newCap - 1)] = *e
+				} else {
+					var loTail, loHead, hiTail, hiHead, next Node
+					condition := e.next != nil
+					for ;condition ;condition = e.next != nil  {
+						next = *e.next
+						if (e.hash & oldCap) == 0 {
+							if &loTail == nil {
+								loHead = *e
+							} else {
+								loTail.next = e
+							}
+							loTail = *e
+						} else {
+							if &hiTail == nil {
+								hiHead = *e
+							} else {
+								hiTail.next = e
+							}
+							hiTail = *e
+						}
+						e = &next
+					}
+					if &loTail != nil {
+						loTail.next = nil
+						hashMap.nodeArr[i] = loHead
+					}
+					if &hiTail != nil {
+						hiTail.next = nil
+						hashMap.nodeArr[i + oldCap] = hiHead
+					}
+				}
+			}
+		}
+	}
+	return hashMap.nodeArr
 }
-
-
 
 /**
 	删除指定key
