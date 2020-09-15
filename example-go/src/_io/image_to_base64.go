@@ -4,6 +4,9 @@ import (
 	"bufio"
 	"encoding/base64"
 	"errors"
+	"fmt"
+	"github.com/fsnotify/fsnotify"
+	"github.com/spf13/viper"
 	"io/ioutil"
 	"os"
 )
@@ -14,6 +17,36 @@ type (
 		base64 string
 	}
 )
+
+var (
+	SecretId  string
+	SecretKey string
+)
+
+func main() {
+
+}
+
+func init() {
+	viper.SetConfigName("application.yaml")
+	viper.AddConfigPath("../resource")
+	err := viper.ReadInConfig()
+	if err != nil {
+		fmt.Printf("Config File Load Error, %s\n", err)
+		os.Exit(1)
+	}
+	viper.WatchConfig()
+	viper.OnConfigChange(func(e fsnotify.Event) {
+		fmt.Printf("Config File Is Changed")
+	})
+
+	SecretId = viper.GetString("tencent.secretId")
+	SecretKey = viper.GetString("tencent.secretKey")
+
+	fmt.Printf("SecretId: %s\n", SecretId)
+	fmt.Printf("SecretKey: %s\n", SecretKey)
+}
+
 
 func NewImage(url string) *Image {
 	f, err := os.Open(url)

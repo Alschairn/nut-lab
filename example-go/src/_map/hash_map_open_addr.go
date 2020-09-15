@@ -224,6 +224,7 @@ func (hashMap *HashMap) resize() []Node {
 	hashMap.threshold = newThr
 	hashMap.nodeArr = make([]Node, newCap)
 
+	// 数组替换
 	if oldTab != nil {
 		oldLen := len(oldTab)
 		for i := 0; i < oldLen; i++  {
