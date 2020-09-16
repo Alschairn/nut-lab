@@ -230,7 +230,7 @@ func (hashMap *HashMap) resize() []Node {
 		for i := 0; i < oldLen; i++  {
 			if &oldTab[i] != nil {
 				e := &oldTab[i]
-				&oldTab[i] = nil
+				//&oldTab[i] = nil
 				if e.next == nil {
 					hashMap.nodeArr[e.hash & (newCap - 1)] = *e
 				} else {
@@ -284,10 +284,7 @@ func (hashMap *HashMap) Remove(key string) string {
 func (hashMap *HashMap) Clear() {
 	if hashMap.nodeArr != nil && hashMap.size > 0 {
 		hashMap.size = 0
-		for n := range hashMap.nodeArr {
-			// 遍历数组，将指针置为nil
-			&n = nil
-		}
+		hashMap.nodeArr = make([]Node, hashMap.size)
 	}
 }
 
