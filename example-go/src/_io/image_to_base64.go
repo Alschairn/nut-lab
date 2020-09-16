@@ -23,12 +23,10 @@ var (
 	SecretKey string
 )
 
-func main() {
 
-}
 
 func init() {
-	viper.SetConfigName("application.yaml")
+	viper.SetConfigFile("application.properties")
 	viper.AddConfigPath("../resource")
 	err := viper.ReadInConfig()
 	if err != nil {
@@ -82,3 +80,7 @@ func (image *Image) ToCartoonUrl() (string, error) {
 
 	return "", errors.New("")
 }
+
+
+
+
