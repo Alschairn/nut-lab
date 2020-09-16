@@ -4,81 +4,54 @@ import (
 	"bufio"
 	"encoding/base64"
 	"errors"
-	"fmt"
-	"github.com/fsnotify/fsnotify"
-	"github.com/spf13/viper"
 	"io/ioutil"
 	"os"
 )
 
-type (
-	Image struct {
-		url    string
-		base64 string
-	}
+const (
+	resourcePath = "./resource"        // 资源地址
+	filename     = "application"       // 资源文件名
+	accessKey    = "tencent.secretKey" // 访问key
+	accessId     = "tencent.secretId"  // 访问id
 )
 
-var (
-	SecretId  string
-	SecretKey string
-)
+var properties Properties
+
 
 func init() {
-	viper.SetConfigName("application")
-	viper.AddConfigPath("./resource")
-	err := viper.ReadInConfig()
-	if err != nil {
-		fmt.Printf("Config File Load Error, %s\n", err)
-		os.Exit(1)
+	p, err := ReaderProperties(resourcePath, filename)
+	if p == nil || err != nil {
+		panic("load properties error")
 	}
-	viper.WatchConfig()
-	viper.OnConfigChange(func(e fsnotify.Event) {
-		fmt.Printf("Config File Is Changed")
-	})
-
-	SecretId = viper.GetString("tencent.secretId")
-	SecretKey = viper.GetString("tencent.secretKey")
-
-	fmt.Printf("SecretId: %s\n", SecretId)
-	fmt.Printf("SecretKey: %s\n", SecretKey)
+	properties = *p
 }
 
-
-func NewImage(url string) *Image {
+func ToBase64(url string) string {
 	f, err := os.Open(url)
 	if err != nil {
-		panic("图片打开失败")
+		panic("Image file open error")
 	}
 
 	reader := bufio.NewReader(f)
 	content, err := ioutil.ReadAll(reader)
 	if err != nil {
-		panic("图片读取失败")
+		panic("Image file read error")
 	}
-
-	encode := base64.StdEncoding.EncodeToString(content)
-	return &Image{
-		url:    url,
-		base64: encode,
-	}
+	return base64.StdEncoding.EncodeToString(content)
 }
 
 /**
-	将图片转换为动画化，返回base64字符串
- */
-func (image *Image) ToCartoonBase64() (string, error) {
+将图片转换为动画化，返回base64字符串
+*/
+func ToCartoonBase64() (string, error) {
 
 	return "", errors.New("")
 }
 
 /**
-	将图片转换为动画化，返回url
- */
-func (image *Image) ToCartoonUrl() (string, error) {
+将图片转换为动画化，返回url
+*/
+func ToCartoonUrl() (string, error) {
 
 	return "", errors.New("")
 }
-
-
-
-

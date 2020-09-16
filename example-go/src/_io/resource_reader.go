@@ -9,18 +9,22 @@ type Properties struct {
 	properties map[string]string
 }
 
-func (p *Properties) Put(k string, v string) {
+func (p *Properties) SetProperties(k string, v string) {
 	if p.properties == nil {
 		p.properties = make(map[string]string)
 	}
 	p.properties[k] = v
 }
 
-func (p *Properties) Get(k string) (string, error) {
+func (p *Properties) GetProperties(k string) (string, error) {
 	if p.properties == nil {
-		return "", errors.New("properties 未初始化")
+		return "", errors.New("properties not init")
 	}
-	return p.properties[k], nil
+	v := p.properties[k]
+	if v == "" {
+		return "", errors.New("properties key not found")
+	}
+	return v, nil
 }
 
 /**
@@ -32,14 +36,15 @@ func ReaderProperties(path string, filename string) (*Properties, error) {
 	viper.SetConfigType("properties")
 	err := viper.ReadInConfig()
 	if err != nil {
-		return nil, errors.New("load error")
+		return nil, errors.New("read properties file error")
 	}
 
 	properties := Properties{
 		properties: make(map[string]string),
 	}
-	for k, v := range viper.AllSettings() {
-		properties.Put(k, v.(string))
+
+	for _, k := range viper.AllKeys() {
+		properties.SetProperties(k, viper.GetString(k))
 	}
 	return &properties, nil
 }
