@@ -23,11 +23,9 @@ var (
 	SecretKey string
 )
 
-
-
 func init() {
-	viper.SetConfigFile("application.properties")
-	viper.AddConfigPath("../resource")
+	viper.SetConfigName("application")
+	viper.AddConfigPath("./resource")
 	err := viper.ReadInConfig()
 	if err != nil {
 		fmt.Printf("Config File Load Error, %s\n", err)
