@@ -1,1 +1,2 @@
 *.properties
+/example-rust/hello-rust/target/
