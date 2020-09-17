@@ -124,7 +124,7 @@ func (hashMap *HashMap) Get(key string) (string, error) {
 	// 如果当前数组为空或者map大小小于0，则返回空字符串
 	if hashMap.nodeArr != nil && hashMap.size > 0 {
 		kh := hash(key)                            // 获取查找key的hash值
-		f := hashMap.nodeArr[kh&(hashMap.size-1) ] // 获取对应下标数据
+		f := hashMap.nodeArr[kh&(hashMap.size) ] // 获取对应下标数据
 
 		// 如果hash值匹配，直接返回对应数据，这里检测了node节点的hash值和node节点key的hash值
 		if f.hash == kh &&
@@ -162,10 +162,10 @@ func (hashMap *HashMap) Put(key string, value string) string {
 	}
 	kh := hash(key)
 	idx := kh & (n - 1)
-	if &hashMap.nodeArr[idx] == nil {
+	if hashMap.nodeArr[idx].key == "" && hashMap.nodeArr[idx].value == "" {
 		hashMap.nodeArr[idx] = *NewNode(key, value, kh)
 	} else {
-		e := hashMap.nodeArr[idx]
+		var e = &hashMap.nodeArr[idx]
 		if e.hash == kh && e.key == key { // 首节点即为需要插入节点
 			e.SetValue(value)
 		} else {
