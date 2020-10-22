@@ -12,3 +12,4 @@ def split(text):
         elif i:
             sentence_list.append(i)
     return sentence_list
+
