@@ -1,1 +1,5 @@
-package _db
+package main
+
+func main() {
+
+}
