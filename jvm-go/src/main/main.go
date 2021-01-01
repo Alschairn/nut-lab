@@ -1,11 +1,11 @@
 package main
 
 import (
-	"classfile"
-	"classpath"
 	"fmt"
+	"github.com/classfile"
+	"github.com/classpath"
+	"github.com/runtimedata"
 	"os"
-	"runtimedata"
 )
 
 func main() {
@@ -20,8 +20,8 @@ func main() {
 }
 
 /**
-	打印输出
- */
+打印输出
+*/
 func printUsage() {
 	fmt.Printf("Usage: %s [-options] Class [Args...]\n", os.Args[0])
 }
@@ -54,7 +54,6 @@ func startJVM(cmd *classpath.Cmd) {
 	testOperandStack(frame.OperandStack())
 
 }
-
 
 func testLocalVars(vars runtimedata.LocalVars) {
 	vars.SetInt(0, 100)
@@ -90,7 +89,6 @@ func testOperandStack(ops *runtimedata.OperandStack) {
 	println(ops.PopInt())
 }
 
-
 func loadClass(className string, cp *classpath.Classpath) *classfile.ClassFile {
 	classData, _, err := cp.ReadClass(className)
 	if err != nil {
@@ -119,4 +117,3 @@ func printClassInfo(cf *classfile.ClassFile) {
 		fmt.Printf(" %s\n", m.Name())
 	}
 }
-

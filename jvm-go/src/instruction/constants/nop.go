@@ -2,7 +2,7 @@ package constants
 
 import (
 	"instruction"
-	"runtimedata"
+	"github.com/runtimedata"
 )
 
 type NOP struct {

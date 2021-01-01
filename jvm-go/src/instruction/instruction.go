@@ -1,6 +1,6 @@
 package instruction
 
-import "runtimedata"
+import "github.com/runtimedata"
 
 /**
 	指令接口

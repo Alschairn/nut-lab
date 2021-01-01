@@ -1,8 +1,8 @@
 package classfile
 
 /**
-	变长属性，只存在于method_info结构中，存放字节码等方法相关信息
- */
+变长属性，只存在于method_info结构中，存放字节码等方法相关信息
+*/
 type CodeAttribute struct {
 	cp             ConstantPool           // 常量池
 	maxStack       uint16                 // 操作数栈最大深度
