@@ -5,9 +5,7 @@ import (
 	"github.com/runtimedata"
 )
 
-type NOP struct {
-	instruction.NoOperandsInstruction
-}
+type NOP struct {instruction.NoOperandsInstruction}
 
 func (self *NOP) Execute(frame *runtimedata.Frame) {
 	// noting to do

@@ -5,6 +5,7 @@ type BytecodeReader struct {
 	pc   int    // 读取到那个字节
 }
 
+// 避免每次解码指令都创建一个新的BytecodeReader示例
 func (self *BytecodeReader) Reset(code []byte, pc int) {
 	self.code = code
 	self.pc = pc

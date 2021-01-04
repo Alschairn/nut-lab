@@ -61,6 +61,10 @@ func getJreDir(jreOption string) string {
 	if exists("./jre") {
 		return "./jre"
 	}
+	// 当前机器特殊处理
+	if jh := os.Getenv("JAVA_8_HOME"); jh != "" {
+		return filepath.Join(jh, "jre")
+	}
 	if jh := os.Getenv("JAVA_HOME"); jh != "" {
 		return filepath.Join(jh, "jre")
 	}
