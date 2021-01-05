@@ -5,6 +5,7 @@ import (
 	"github.com/classfile"
 	"github.com/classpath"
 	"github.com/runtimedata"
+	"github.com/instruction"
 	"os"
 	"strings"
 )
@@ -33,14 +34,23 @@ func startJVM(cmd *classpath.Cmd) {
 	cp := classpath.Parse(cmd.XjreOption, cmd.CpOption)
 	fmt.Printf("classpath:%v class:%v, args:%v \n",
 		cp, cmd.Class, cmd.Args)
-
 	className := strings.Replace(cmd.Class, ".", "/", -1)
-	classData, _, err := cp.ReadClass(className)
-	if err != nil {
-		fmt.Printf("Could not find or load main class %s \n", cmd.Class)
-		return
+
+	cf := loadClass(className, cp)
+	mainMethod := getMainMethod(cf)
+	if mainMethod != nil {
+		instruction.Interpret(mainMethod)
+	} else {
+		fmt.Printf("Main method not found in class %s\n", cmd.Class)
 	}
-	fmt.Printf("class data:%v \n", classData)
+
+
+	//classData, _, err := cp.ReadClass(className)
+	//if err != nil {
+	//	fmt.Printf("Could not find or load main class %s \n", cmd.Class)
+	//	return
+	//}
+	//fmt.Printf("class data:%v \n", classData)
 
 	// 类加载
 	//cp := classpath.Parse(cmd.XjreOption, cmd.CpOption)
@@ -50,10 +60,19 @@ func startJVM(cmd *classpath.Cmd) {
 	//printClassInfo(cf)
 
 	// 本地变量表
-	frame := runtimedata.NewFrame(100, 100)
-	testLocalVars(frame.LocalVars())
-	testOperandStack(frame.OperandStack())
+	//frame := runtimedata.NewFrame(100, 100)
+	//testLocalVars(frame.LocalVars())
+	//testOperandStack(frame.OperandStack())
 
+}
+
+func getMainMethod(cf *classfile.ClassFile) *classfile.MemberInfo {
+	for _, m := range cf.Methods() {
+		if m.Name() == "main" && m.Descriptor() == "([Ljava/lang/String;)V" {
+			return m
+		}
+	}
+	return nil
 }
 
 func testLocalVars(vars runtimedata.LocalVars) {
@@ -101,6 +120,7 @@ func loadClass(className string, cp *classpath.Classpath) *classfile.ClassFile {
 	}
 	return cf
 }
+
 
 func printClassInfo(cf *classfile.ClassFile) {
 	fmt.Printf("version: %v.%v\n", cf.MajorVersion(), cf.MinorVersion())

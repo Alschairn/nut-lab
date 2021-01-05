@@ -6,7 +6,7 @@ import (
 	"github.com/runtimedata"
 )
 
-func interpret(methodInfo *classfile.MemberInfo) {
+func Interpret(methodInfo *classfile.MemberInfo) {
 	codeAttr := methodInfo.CodeAttribute()
 	maxLocals := codeAttr.MaxLocals()
 	maxStack := codeAttr.MaxStack()
@@ -41,6 +41,6 @@ func loop(thread *runtimedata.Thread, bytecode []byte) {
 		frame.SetNextPC(reader.PC())
 		// execute
 		fmt.Printf("pc:%2d inst:%T %v\n", pc, inst, inst)
-		inst.Execute(*frame)
+		inst.Execute(frame)
 	}
 }
