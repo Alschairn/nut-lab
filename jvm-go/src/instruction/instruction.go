@@ -1,16 +1,23 @@
 package instruction
 
-import "github.com/runtimedata"
+import (
+	"fmt"
+	"github.com/runtimedata"
+	"instruction/constants"
+)
 
+var (
+	nop = &constants.NOP{}
+	aconst_null = &constants.ACONST_NULL{}
+)
 /**
 	指令接口
  */
 type Instruction interface {
-
 	FetchOperands(reader *BytecodeReader)
-
-	Execute(frame runtimedata.Frame)
+	Execute(frame *runtimedata.Frame)
 }
+
 
 type NoOperandsInstruction struct {
 }
@@ -44,4 +51,13 @@ type Index16Instruction struct {
 
 func (self *Index16Instruction) FetchOperands(reader *BytecodeReader) {
 	self.Index = uint(reader.ReadUint16())
+}
+
+func NewInstruction(opcode byte) Instruction {
+	switch opcode {
+	case 0x00: return nop
+	case 0x01: return aconst_null
+	default:
+		panic(fmt.Errorf("Unsupported opcode: 0x%x!", opcode))
+	}
 }

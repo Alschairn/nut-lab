@@ -5,6 +5,10 @@ type BytecodeReader struct {
 	pc   int    // 读取到那个字节
 }
 
+func (self *BytecodeReader) PC() int {
+	return self.pc
+}
+
 // 避免每次解码指令都创建一个新的BytecodeReader示例
 func (self *BytecodeReader) Reset(code []byte, pc int) {
 	self.code = code
@@ -39,3 +43,16 @@ func (self *BytecodeReader) ReadInt32() int32 {
 	return (byte1 << 24) | (byte2 << 16) | (byte3 << 8) | byte4
 }
 
+func (self *BytecodeReader) SkipPadding() {
+	for self.pc % 4 != 0 {
+		self.ReadUint8()
+	}
+}
+
+func (self *BytecodeReader) ReadInt32s(n int32) []int32 {
+	ints := make([]int32, n)
+	for i := range ints {
+		ints[i] = self.ReadInt32()
+	}
+	return ints
+}
