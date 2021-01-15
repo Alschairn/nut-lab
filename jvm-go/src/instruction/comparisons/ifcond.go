@@ -1,21 +1,21 @@
 package comparisons
 
 import (
-	"instruction"
+	"github.com/base"
 	"github.com/runtimedata"
 )
 
-type IFEQ struct{ instruction.BranchInstruction }
+type IFEQ struct{ base.BranchInstruction }
 
 func (self *IFEQ) Execute(frame *runtimedata.Frame) {
 	val := frame.OperandStack().PopInt()
 	if val == 0 {
-		instruction.Branch(frame, self.Offset)
+		base.Branch(frame, self.Offset)
 	}
 }
 
-type IFNE struct{ instruction.BranchInstruction }
-type IFLT struct{ instruction.BranchInstruction }
-type IFLE struct{ instruction.BranchInstruction }
-type IFGT struct{ instruction.BranchInstruction }
-type IFGE struct{ instruction.BranchInstruction }
+type IFNE struct{ base.BranchInstruction }
+type IFLT struct{ base.BranchInstruction }
+type IFLE struct{ base.BranchInstruction }
+type IFGT struct{ base.BranchInstruction }
+type IFGE struct{ base.BranchInstruction }

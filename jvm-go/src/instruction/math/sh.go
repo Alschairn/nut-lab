@@ -1,11 +1,11 @@
 package math
 
 import (
-	"instruction"
+	"github.com/base"
 	"github.com/runtimedata"
 )
 
-type ISHL struct{ instruction.NoOperandsInstruction } // int左位移
+type ISHL struct{ base.NoOperandsInstruction } // int左位移
 
 func (self *ISHL) Execute(frame *runtimedata.Frame) {
 	stack := frame.OperandStack()
@@ -19,7 +19,7 @@ func (self *ISHL) Execute(frame *runtimedata.Frame) {
 }
 
 
-type ISHR struct{ instruction.NoOperandsInstruction } // int算术右位移
+type ISHR struct{ base.NoOperandsInstruction } // int算术右位移
 
 func (self *LSHR) Execute(frame *runtimedata.Frame) {
 	stack := frame.OperandStack()
@@ -30,7 +30,7 @@ func (self *LSHR) Execute(frame *runtimedata.Frame) {
 	stack.PushLong(result)
 }
 
-type IUSHR struct{ instruction.NoOperandsInstruction } // int逻辑右位移
+type IUSHR struct{ base.NoOperandsInstruction } // int逻辑右位移
 
 func (self *IUSHR) Execute(frame *runtimedata.Frame) {
 	stack := frame.OperandStack()
@@ -43,8 +43,8 @@ func (self *IUSHR) Execute(frame *runtimedata.Frame) {
 }
 
 
-type LSHL struct{ instruction.NoOperandsInstruction } // long左位移
+type LSHL struct{ base.NoOperandsInstruction } // long左位移
 
-type LSHR struct{ instruction.NoOperandsInstruction } // long算术右位移
+type LSHR struct{ base.NoOperandsInstruction } // long算术右位移
 
-type LUSHR struct{ instruction.NoOperandsInstruction } // long逻辑右位移
+type LUSHR struct{ base.NoOperandsInstruction } // long逻辑右位移

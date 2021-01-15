@@ -1,7 +1,7 @@
 package control
 
 import (
-	"instruction"
+	"github.com/base"
 	"github.com/runtimedata"
 )
 
@@ -11,7 +11,7 @@ type LOOKUP_SWITCH struct {
 	matchOffsets []int32
 }
 
-func (self *LOOKUP_SWITCH) FetchOperands(reader *instruction.BytecodeReader) {
+func (self *LOOKUP_SWITCH) FetchOperands(reader *base.BytecodeReader) {
 	reader.SkipPadding()
 	self.defaultOffset = reader.ReadInt32()
 	self.npairs = reader.ReadInt32()
@@ -23,9 +23,9 @@ func (self *LOOKUP_SWITCH) Execute(frame *runtimedata.Frame) {
 	for i := int32(0); i < self.npairs*2; i += 2 {
 		if self.matchOffsets[i] == key {
 			offset := self.matchOffsets[i+1]
-			instruction.Branch(frame, int(offset))
+			base.Branch(frame, int(offset))
 			return
 		}
 	}
-	instruction.Branch(frame, int(self.defaultOffset))
+	base.Branch(frame, int(self.defaultOffset))
 }

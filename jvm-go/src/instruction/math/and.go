@@ -1,11 +1,11 @@
 package math
 
 import (
-	"instruction"
+	"github.com/base"
 	"github.com/runtimedata"
 )
 
-type IAND struct{ instruction.NoOperandsInstruction }
+type IAND struct{ base.NoOperandsInstruction }
 
 func (self *IAND) Execute(frame *runtimedata.Frame) {
 	stack := frame.OperandStack()
@@ -15,7 +15,7 @@ func (self *IAND) Execute(frame *runtimedata.Frame) {
 	stack.PushInt(result)
 }
 
-type LAND struct{ instruction.NoOperandsInstruction }
+type LAND struct{ base.NoOperandsInstruction }
 
 func (self *LAND) Execute(frame *runtimedata.Frame) {
 	stack := frame.OperandStack()

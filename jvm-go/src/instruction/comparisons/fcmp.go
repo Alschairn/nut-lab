@@ -1,17 +1,17 @@
 package comparisons
 
 import (
-	"instruction"
+	"github.com/base"
 	"github.com/runtimedata"
 )
 
-type FCMPG struct{ instruction.NoOperandsInstruction }
+type FCMPG struct{ base.NoOperandsInstruction }
 
 func (self *FCMPG) Execute(frame *runtimedata.Frame) {
 	_fcmp(frame, true)
 }
 
-type FCMPL struct{ instruction.NoOperandsInstruction }
+type FCMPL struct{ base.NoOperandsInstruction }
 
 func (self *FCMPL) Execute(frame *runtimedata.Frame) {
 	_fcmp(frame, false)

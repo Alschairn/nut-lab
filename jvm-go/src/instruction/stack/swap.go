@@ -1,12 +1,12 @@
 package stack
 
 import (
-	"instruction"
+	"github.com/base"
 	"github.com/runtimedata"
 )
 
 // Swap the top two operand stack values
-type SWAP struct{ instruction.NoOperandsInstruction }
+type SWAP struct{ base.NoOperandsInstruction }
 
 func (self *SWAP) Execute(frame *runtimedata.Frame) {
 	stack := frame.OperandStack()

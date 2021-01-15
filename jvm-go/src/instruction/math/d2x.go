@@ -1,15 +1,15 @@
 package math
 
 import (
-	"instruction"
+	"github.com/base"
 	"github.com/runtimedata"
 )
 
 // todo	实现
-type D2F struct{ instruction.NoOperandsInstruction }
+type D2F struct{ base.NoOperandsInstruction }
 
 
-type D2I struct{ instruction.NoOperandsInstruction }
+type D2I struct{ base.NoOperandsInstruction }
 
 func (self *D2I) Execute(frame *runtimedata.Frame) {
 	stack := frame.OperandStack()
@@ -19,5 +19,5 @@ func (self *D2I) Execute(frame *runtimedata.Frame) {
 }
 
 // todo 实现
-type D2L struct{ instruction.NoOperandsInstruction }
+type D2L struct{ base.NoOperandsInstruction }
 

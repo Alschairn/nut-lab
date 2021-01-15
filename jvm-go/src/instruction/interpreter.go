@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"github.com/classfile"
 	"github.com/runtimedata"
+	"github.com/base"
 )
 
 func Interpret(methodInfo *classfile.MemberInfo) {
@@ -29,14 +30,14 @@ func catchErr(frame *runtimedata.Frame) {
 
 func loop(thread *runtimedata.Thread, bytecode []byte) {
 	frame := thread.PopFrame()
-	reader := BytecodeReader{}
+	reader := base.BytecodeReader{}
 	for {
 		pc := frame.NextPC()
 		thread.SetPC(pc)
 		// decode
 		reader.Reset(bytecode, pc)
 		opcode := reader.ReadUint8()
-		inst := NewInstruction(opcode)
+		inst := base.NewInstruction(opcode)
 		inst.FetchOperands(&reader)
 		frame.SetNextPC(reader.PC())
 		// execute

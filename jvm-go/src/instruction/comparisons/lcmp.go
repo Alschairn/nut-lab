@@ -1,12 +1,12 @@
 package comparisons
 
 import (
-	"instruction"
+	"github.com/base"
 	"github.com/runtimedata"
 )
 
 // 比较Long变量
-type LCMP struct {instruction.NoOperandsInstruction}
+type LCMP struct {base.NoOperandsInstruction}
 
 // 将栈顶的两个long变量弹出，进行比较，将比较结果（0、1、-1）推入栈顶
 func (self *LCMP) Execute(frame *runtimedata.Frame) {

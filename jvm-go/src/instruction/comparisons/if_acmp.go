@@ -1,21 +1,21 @@
 package comparisons
 
 import (
-	"instruction"
+	"github.com/base"
 	"github.com/runtimedata"
 )
 
-type IF_ACMPEQ struct{ instruction.BranchInstruction }
+type IF_ACMPEQ struct{ base.BranchInstruction }
 
 func (self *IF_ACMPEQ) Execute(frame *runtimedata.Frame) {
 	stack := frame.OperandStack()
 	ref2 := stack.PopRef()
 	ref1 := stack.PopRef()
 	if ref1 == ref2 {
-		instruction.Branch(frame, self.Offset)
+		base.Branch(frame, self.Offset)
 	}
 }
 
-type IF_ACMPNE struct{ instruction.BranchInstruction }
+type IF_ACMPNE struct{ base.BranchInstruction }
 
 

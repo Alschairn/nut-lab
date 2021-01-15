@@ -1,4 +1,4 @@
-package instruction
+package base
 
 import "github.com/runtimedata"
 

@@ -1,4 +1,4 @@
-package instruction
+package base
 
 type BytecodeReader struct {
 	code []byte // 字节码

@@ -1,12 +1,12 @@
 package control
 
 import (
-	"instruction"
+	"github.com/base"
 	"github.com/runtimedata"
 )
 
-type GOTO struct{ instruction.BranchInstruction }
+type GOTO struct{ base.BranchInstruction }
 
 func (self *GOTO) Execute(frame *runtimedata.Frame) {
-	instruction.Branch(frame, self.Offset)
+	base.Branch(frame, self.Offset)
 }

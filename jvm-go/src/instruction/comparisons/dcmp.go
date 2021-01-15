@@ -1,16 +1,16 @@
 package comparisons
 import (
-	"instruction"
+	"github.com/base"
 	"github.com/runtimedata"
 )
 
-type DCMPG struct{ instruction.NoOperandsInstruction }
+type DCMPG struct{ base.NoOperandsInstruction }
 
 func (self *DCMPG) Execute(frame *runtimedata.Frame) {
 	_dcmp(frame, true)
 }
 
-type DCMPL struct{ instruction.NoOperandsInstruction }
+type DCMPL struct{ base.NoOperandsInstruction }
 
 func (self *DCMPL) Execute(frame *runtimedata.Frame) {
 	_dcmp(frame, false)

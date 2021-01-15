@@ -1,7 +1,7 @@
 package control
 
 import (
-	"instruction"
+	"github.com/base"
 	"github.com/runtimedata"
 )
 
@@ -12,7 +12,7 @@ type TABLE_SWITCH struct {
 	jumpOffsets []int32
 }
 
-func (self *TABLE_SWITCH) FetchOperands(reader *instruction.BytecodeReader) {
+func (self *TABLE_SWITCH) FetchOperands(reader *base.BytecodeReader) {
 	reader.SkipPadding()
 	self.defaultOffset = reader.ReadInt32()
 	self.low = reader.ReadInt32()
@@ -29,5 +29,5 @@ func (self *TABLE_SWITCH) Execute(frame *runtimedata.Frame) {
 	} else {
 		offset = int(self.defaultOffset)
 	}
-	instruction.Branch(frame, offset)
+	base.Branch(frame, offset)
 }

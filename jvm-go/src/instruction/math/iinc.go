@@ -1,7 +1,7 @@
 package math
 
 import (
-	"instruction"
+	"github.com/base"
 	"github.com/runtimedata"
 )
 
@@ -12,7 +12,7 @@ type IINC struct {
 }
 
 // 从字节码读取操作数
-func (self *IINC) FetchOperands(reader *instruction.BytecodeReader) {
+func (self *IINC) FetchOperands(reader *base.BytecodeReader) {
 	self.Index = uint(reader.ReadUint8())
 	self.Const = int32(reader.ReadInt8())
 }

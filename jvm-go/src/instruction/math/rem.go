@@ -1,12 +1,12 @@
 package math
 
 import (
-	"instruction"
+	"github.com/base"
 	"github.com/runtimedata"
 	"math"
 )
 
-type DREM struct{ instruction.NoOperandsInstruction }
+type DREM struct{ base.NoOperandsInstruction }
 
 func (self *DREM) Execute(frame *runtimedata.Frame) {
 	stack := frame.OperandStack()
@@ -16,10 +16,10 @@ func (self *DREM) Execute(frame *runtimedata.Frame) {
 	stack.PushDouble(result)
 }
 
-type FREM struct{ instruction.NoOperandsInstruction }
+type FREM struct{ base.NoOperandsInstruction }
 
 
-type IREM struct{ instruction.NoOperandsInstruction }
+type IREM struct{ base.NoOperandsInstruction }
 
 func (self *IREM) Execute(frame *runtimedata.Frame) {
 	stack := frame.OperandStack()
@@ -32,7 +32,7 @@ func (self *IREM) Execute(frame *runtimedata.Frame) {
 	stack.PushInt(result)
 }
 
-type LREM struct{ instruction.NoOperandsInstruction }
+type LREM struct{ base.NoOperandsInstruction }
 
 func (self *LREM) Execute(frame *runtimedata.Frame) {
 	stack := frame.OperandStack()

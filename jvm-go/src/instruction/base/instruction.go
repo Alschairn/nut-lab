@@ -1,9 +1,10 @@
-package instruction
+package base
 
 import (
+	"constants"
 	"fmt"
+	//"github.com/constants"
 	"github.com/runtimedata"
-	"instruction/constants"
 )
 
 var (

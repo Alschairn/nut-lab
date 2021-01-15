@@ -5,7 +5,6 @@ import (
 	"github.com/classfile"
 	"github.com/classpath"
 	"github.com/runtimedata"
-	"github.com/instruction"
 	"os"
 	"strings"
 )

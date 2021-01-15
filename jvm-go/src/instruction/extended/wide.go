@@ -1,17 +1,15 @@
 package extended
 
 import (
-	"instruction"
-	//"instruction/loads"
-	//"instruction/math"
+	"github.com/base"
 	"github.com/runtimedata"
 )
 
 type WIDE struct {
-	modifiedInstruction instruction.Instruction // 存放被改变的指令
+	modifiedInstruction base.Instruction // 存放被改变的指令
 }
 
-func (self *WIDE) FetchOperands(reader *instruction.BytecodeReader) {
+func (self *WIDE) FetchOperands(reader *base.BytecodeReader) {
 	opcode := reader.ReadUint8()
 	switch opcode {
 	//case 0x15:
