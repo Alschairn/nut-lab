@@ -5,6 +5,7 @@ import (
 	"github.com/classfile"
 	"github.com/classpath"
 	"github.com/runtimedata"
+	"github.com/interpreter"
 	"os"
 	"strings"
 )
@@ -38,7 +39,7 @@ func startJVM(cmd *classpath.Cmd) {
 	cf := loadClass(className, cp)
 	mainMethod := getMainMethod(cf)
 	if mainMethod != nil {
-		instruction.Interpret(mainMethod)
+		interpreter.Interpret(mainMethod)
 	} else {
 		fmt.Printf("Main method not found in class %s\n", cmd.Class)
 	}

@@ -1,16 +1,10 @@
 package base
 
 import (
-	"constants"
-	"fmt"
-	//"github.com/constants"
 	"github.com/runtimedata"
 )
 
-var (
-	nop = &constants.NOP{}
-	aconst_null = &constants.ACONST_NULL{}
-)
+
 /**
 	指令接口
  */
@@ -54,11 +48,3 @@ func (self *Index16Instruction) FetchOperands(reader *BytecodeReader) {
 	self.Index = uint(reader.ReadUint16())
 }
 
-func NewInstruction(opcode byte) Instruction {
-	switch opcode {
-	case 0x00: return nop
-	case 0x01: return aconst_null
-	default:
-		panic(fmt.Errorf("Unsupported opcode: 0x%x!", opcode))
-	}
-}

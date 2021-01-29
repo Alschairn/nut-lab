@@ -1,10 +1,16 @@
-package instruction
+package interpreter
 
 import (
 	"fmt"
-	"github.com/classfile"
-	"github.com/runtimedata"
 	"github.com/base"
+	"github.com/classfile"
+	"github.com/constants"
+	"github.com/runtimedata"
+)
+
+var (
+	nop = &constants.NOP{}
+	aconst_null = &constants.ACONST_NULL{}
 )
 
 func Interpret(methodInfo *classfile.MemberInfo) {
@@ -37,11 +43,21 @@ func loop(thread *runtimedata.Thread, bytecode []byte) {
 		// decode
 		reader.Reset(bytecode, pc)
 		opcode := reader.ReadUint8()
-		inst := base.NewInstruction(opcode)
+		inst := NewInstruction(opcode)
 		inst.FetchOperands(&reader)
 		frame.SetNextPC(reader.PC())
 		// execute
 		fmt.Printf("pc:%2d inst:%T %v\n", pc, inst, inst)
 		inst.Execute(frame)
+	}
+}
+
+
+func NewInstruction(opcode byte) base.Instruction {
+	switch opcode {
+	case 0x00: return nop
+	case 0x01: return aconst_null
+	default:
+		panic(fmt.Errorf("Unsupported opcode: 0x%x!", opcode))
 	}
 }
