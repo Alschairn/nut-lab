@@ -1,8 +1,8 @@
 package extended
 
 import (
-	"base"
-	"runtimedata"
+	"jvm-go/instruction/base"
+	"jvm-go/runtimedata"
 )
 
 type WIDE struct {
@@ -39,5 +39,5 @@ func (self *WIDE) FetchOperands(reader *base.BytecodeReader) {
 }
 
 func (self *WIDE) Execute(frame *runtimedata.Frame) {
-	self.modifiedInstruction.Execute(*frame)
+	self.modifiedInstruction.Execute(frame)
 }

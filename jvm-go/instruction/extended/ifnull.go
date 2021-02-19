@@ -1,8 +1,8 @@
 package extended
 
 import (
-	"base"
-	"runtimedata"
+	"jvm-go/instruction/base"
+	"jvm-go/runtimedata"
 )
 
 type IFNULL struct{ base.BranchInstruction } // Branch if reference is null

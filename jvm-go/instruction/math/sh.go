@@ -1,8 +1,8 @@
 package math
 
 import (
-	"base"
-	"runtimedata"
+	"jvm-go/instruction/base"
+	"jvm-go/runtimedata"
 )
 
 type ISHL struct{ base.NoOperandsInstruction } // int左位移

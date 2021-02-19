@@ -1,7 +1,7 @@
 package comparisons
 import (
-	"base"
-	"runtimedata"
+	"jvm-go/instruction/base"
+	"jvm-go/runtimedata"
 )
 
 type DCMPG struct{ base.NoOperandsInstruction }

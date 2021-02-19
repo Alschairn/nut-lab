@@ -1,8 +1,8 @@
 package control
 
 import (
-	"base"
-	"runtimedata"
+	"jvm-go/instruction/base"
+	"jvm-go/runtimedata"
 )
 
 type GOTO struct{ base.BranchInstruction }

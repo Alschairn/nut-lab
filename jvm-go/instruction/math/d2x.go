@@ -1,8 +1,8 @@
 package math
 
 import (
-	"base"
-	"runtimedata"
+	"jvm-go/instruction/base"
+	"jvm-go/runtimedata"
 )
 
 // todo	实现

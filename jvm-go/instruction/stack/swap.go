@@ -1,8 +1,8 @@
 package stack
 
 import (
-	"base"
-	"runtimedata"
+	"jvm-go/instruction/base"
+	"jvm-go/runtimedata"
 )
 
 // Swap the top two operand stack values

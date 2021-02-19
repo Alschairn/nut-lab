@@ -1,13 +1,13 @@
 package constants
 
 import (
-	base2 "base"
-	"runtimedata"
+	"jvm-go/instruction/base"
+	"jvm-go/runtimedata"
 )
 
 type BIPUSH struct {val int8} // 从操作数中获取一个byte型整数，扩展为int型，推入栈顶
 
-func (self *BIPUSH) FetchOperands(reader *base2.BytecodeReader) {
+func (self *BIPUSH) FetchOperands(reader *base.BytecodeReader) {
 	self.val = reader.ReadInt8()
 }
 
@@ -18,7 +18,7 @@ func (self *BIPUSH) Execute(frame *runtimedata.Frame) {
 
 type SIPUSH struct {val int16} // 从操作数中获取一个short型证书，扩展为int型，推入栈顶
 
-func (self *SIPUSH) FetchOperands(reader *base2.BytecodeReader) {
+func (self *SIPUSH) FetchOperands(reader *base.BytecodeReader) {
 	self.val = reader.ReadInt16()
 }
 

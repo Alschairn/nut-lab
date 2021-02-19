@@ -1,8 +1,8 @@
 package comparisons
 
 import (
-	"base"
-	"runtimedata"
+	"jvm-go/instruction/base"
+	"jvm-go/runtimedata"
 )
 
 type IF_ACMPEQ struct{ base.BranchInstruction }

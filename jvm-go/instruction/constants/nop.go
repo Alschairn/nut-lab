@@ -1,8 +1,8 @@
 package constants
 
 import (
-	"base"
-	"runtimedata"
+	"jvm-go/instruction/base"
+	"jvm-go/runtimedata"
 )
 
 type NOP struct { base.NoOperandsInstruction }

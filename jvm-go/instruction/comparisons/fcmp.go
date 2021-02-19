@@ -1,8 +1,8 @@
 package comparisons
 
 import (
-	"base"
-	"runtimedata"
+	"jvm-go/instruction/base"
+	"jvm-go/runtimedata"
 )
 
 type FCMPG struct{ base.NoOperandsInstruction }

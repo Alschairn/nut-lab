@@ -1,8 +1,8 @@
 package constants
 
 import (
-	"base"
-	"runtimedata"
+	"jvm-go/instruction/base"
+	"jvm-go/runtimedata"
 )
 
 // 将null引用推入操作数栈顶

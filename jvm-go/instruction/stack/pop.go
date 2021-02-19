@@ -1,8 +1,8 @@
 package stack
 
 import (
-	"base"
-	"runtimedata"
+	"jvm-go/instruction/base"
+	"jvm-go/runtimedata"
 )
 
 // 栈顶变量弹出，用于弹出占用一个操作数栈位置的变量

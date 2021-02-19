@@ -1,8 +1,8 @@
 package loads
 
 import (
-	"base"
-	"runtimedata"
+	"jvm-go/instruction/base"
+	"jvm-go/runtimedata"
 )
 
 func _iload(frame *runtimedata.Frame, index uint) {

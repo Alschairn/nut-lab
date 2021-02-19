@@ -1,16 +1,16 @@
 package interpreter
 
 import (
-	base2 "base"
-	"classfile"
-	constants2 "constants"
+	"jvm-go/instruction/base"
+	"jvm-go/instruction/constants"
+	"jvm-go/classfile"
+	"jvm-go/runtimedata"
 	"fmt"
-	"runtimedata"
 )
 
 var (
-	nop = &constants2.NOP{}
-	aconst_null = &constants2.ACONST_NULL{}
+	nop = &constants.NOP{}
+	aconst_null = &constants.ACONST_NULL{}
 )
 
 func Interpret(methodInfo *classfile.MemberInfo) {
@@ -36,7 +36,7 @@ func catchErr(frame *runtimedata.Frame) {
 
 func loop(thread *runtimedata.Thread, bytecode []byte) {
 	frame := thread.PopFrame()
-	reader := base2.BytecodeReader{}
+	reader := base.BytecodeReader{}
 	for {
 		pc := frame.NextPC()
 		thread.SetPC(pc)
@@ -53,7 +53,7 @@ func loop(thread *runtimedata.Thread, bytecode []byte) {
 }
 
 
-func NewInstruction(opcode byte) base2.Instruction {
+func NewInstruction(opcode byte) base.Instruction {
 	switch opcode {
 	case 0x00: return nop
 	case 0x01: return aconst_null

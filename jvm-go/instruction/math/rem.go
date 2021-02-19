@@ -1,8 +1,9 @@
 package math
 
 import (
-	"base"
-	"runtimedata"
+	"jvm-go/instruction/base"
+	"jvm-go/runtimedata"
+	"math"
 )
 
 type DREM struct{ base.NoOperandsInstruction }

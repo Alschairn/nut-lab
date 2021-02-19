@@ -1,7 +1,7 @@
 package base
 
 import (
-	"runtimedata"
+	"jvm-go/runtimedata"
 )
 
 

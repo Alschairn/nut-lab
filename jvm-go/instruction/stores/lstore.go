@@ -1,8 +1,8 @@
 package stores
 
 import (
-	"base"
-	"runtimedata"
+	"jvm-go/instruction/base"
+	"jvm-go/runtimedata"
 )
 
 // Store long into local variable

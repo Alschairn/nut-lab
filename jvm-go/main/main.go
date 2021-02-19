@@ -1,12 +1,12 @@
 package main
 
 import (
-	"classfile"
-	"classpath"
+	"jvm-go/classfile"
+	"jvm-go/classpath"
 	"fmt"
-	"interpreter"
+	"jvm-go/interpreter"
 	"os"
-	"runtimedata"
+	"jvm-go/runtimedata"
 	"strings"
 )
 

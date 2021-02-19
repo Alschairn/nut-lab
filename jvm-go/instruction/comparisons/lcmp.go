@@ -1,8 +1,8 @@
 package comparisons
 
 import (
-	"base"
-	"runtimedata"
+	"jvm-go/instruction/base"
+	"jvm-go/runtimedata"
 )
 
 // 比较Long变量
