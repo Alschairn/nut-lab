@@ -1,2 +1,3 @@
 *.properties
-/example-rust/hello-rust/target/
+.idea
+.gitignore
