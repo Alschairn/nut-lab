@@ -18,4 +18,8 @@ func (self *IF_ACMPEQ) Execute(frame *runtimedata.Frame) {
 
 type IF_ACMPNE struct{ base.BranchInstruction }
 
+func (self *IF_ACMPNE) Execute(frame *runtimedata.Frame) {
+
+}
+
 

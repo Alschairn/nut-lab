@@ -5,16 +5,11 @@ import (
 	"jvm-go/runtimedata"
 )
 
-func _iload(frame *runtimedata.Frame, index uint) {
-	val := frame.LocalVars().GetInt(index)
-	frame.OperandStack().PushInt(val)
-}
-
 // Load int from local variable
 type ILOAD struct{ base.Index8Instruction }
 
 func (self *ILOAD) Execute(frame *runtimedata.Frame) {
-	_iload(frame, uint(self.Index))
+	_iload(frame, self.Index)
 }
 
 type ILOAD_0 struct{ base.NoOperandsInstruction }
@@ -41,3 +36,7 @@ func (self *ILOAD_3) Execute(frame *runtimedata.Frame) {
 	_iload(frame, 3)
 }
 
+func _iload(frame *runtimedata.Frame, index uint) {
+	val := frame.LocalVars().GetInt(index)
+	frame.OperandStack().PushInt(val)
+}

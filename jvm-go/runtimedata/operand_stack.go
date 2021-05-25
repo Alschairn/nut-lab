@@ -22,6 +22,7 @@ func newOperandStack(maxStack uint) *OperandStack {
 func (self *OperandStack) PushInt(val int32) {
 	self.slots[self.size].num = val
 	self.size++
+	self.slots = append(self.slots, *&Slot{})
 }
 
 func (self *OperandStack) PopInt() int32 {
@@ -33,6 +34,7 @@ func (self *OperandStack) PushFloat(val float32) {
 	bits := math.Float32bits(val)
 	self.slots[self.size].num = int32(bits)
 	self.size++
+	self.slots = append(self.slots, *&Slot{})
 }
 
 func (self *OperandStack) PopFloat() float32 {
@@ -45,6 +47,7 @@ func (self *OperandStack) PushLong(val int64) {
 	self.slots[self.size].num = int32(val)
 	self.slots[self.size+1].num = int32(val >> 32)
 	self.size += 2
+	self.slots = append(self.slots, *&Slot{}, *&Slot{})
 }
 
 func (self *OperandStack) PopLong() int64 {
@@ -67,6 +70,7 @@ func (self *OperandStack) PopDouble() float64 {
 func (self *OperandStack) PushRef(ref *Object) {
 	self.slots[self.size].ref = ref
 	self.size++
+	self.slots = append(self.slots, *&Slot{})
 }
 
 func (self *OperandStack) PopRef() *Object {
@@ -79,6 +83,7 @@ func (self *OperandStack) PopRef() *Object {
 func (self *OperandStack) PushSlot(slot Slot) {
 	self.slots[self.size] = slot
 	self.size++
+	self.slots = append(self.slots, *&Slot{})
 }
 
 func (self *OperandStack) PopSlot() Slot {

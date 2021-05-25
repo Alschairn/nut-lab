@@ -31,6 +31,7 @@ func printUsage() {
 func startJVM(cmd *classpath.Cmd) {
 
 	// 类读取
+	cmd.CpOption = "main/Test.class"
 	cp := classpath.Parse(cmd.XjreOption, cmd.CpOption)
 	fmt.Printf("classpath:%v class:%v, args:%v \n",
 		cp, cmd.Class, cmd.Args)

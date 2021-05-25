@@ -5,8 +5,9 @@ import (
 	"jvm-go/runtimedata"
 )
 
-type NOP struct { base.NoOperandsInstruction }
+// Do nothing
+type NOP struct{ base.NoOperandsInstruction }
 
 func (self *NOP) Execute(frame *runtimedata.Frame) {
-	// noting to do
+	// really do nothing
 }

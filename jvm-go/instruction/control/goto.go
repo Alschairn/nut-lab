@@ -5,6 +5,7 @@ import (
 	"jvm-go/runtimedata"
 )
 
+// Branch always
 type GOTO struct{ base.BranchInstruction }
 
 func (self *GOTO) Execute(frame *runtimedata.Frame) {

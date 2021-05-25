@@ -5,17 +5,31 @@ import (
 	"jvm-go/runtimedata"
 )
 
-// 栈顶变量弹出，用于弹出占用一个操作数栈位置的变量
+// Pop the top operand stack value
 type POP struct{ base.NoOperandsInstruction }
 
+/*
+bottom -> top
+[...][c][b][a]
+            |
+            V
+[...][c][b]
+*/
 func (self *POP) Execute(frame *runtimedata.Frame) {
 	stack := frame.OperandStack()
 	stack.PopSlot()
 }
 
-// 栈顶变量弹出，用于弹出占用两个个操作数栈位置的变量
+// Pop the top one or two operand stack values
 type POP2 struct{ base.NoOperandsInstruction }
 
+/*
+bottom -> top
+[...][c][b][a]
+         |  |
+         V  V
+[...][c]
+*/
 func (self *POP2) Execute(frame *runtimedata.Frame) {
 	stack := frame.OperandStack()
 	stack.PopSlot()

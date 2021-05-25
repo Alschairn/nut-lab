@@ -5,7 +5,8 @@ import (
 	"jvm-go/runtimedata"
 )
 
-type IFNULL struct{ base.BranchInstruction } // Branch if reference is null
+// Branch if reference is null
+type IFNULL struct{ base.BranchInstruction }
 
 func (self *IFNULL) Execute(frame *runtimedata.Frame) {
 	ref := frame.OperandStack().PopRef()
@@ -14,8 +15,8 @@ func (self *IFNULL) Execute(frame *runtimedata.Frame) {
 	}
 }
 
-
-type IFNONNULL struct{ base.BranchInstruction } // Branch if reference not null
+// Branch if reference not null
+type IFNONNULL struct{ base.BranchInstruction }
 
 func (self *IFNONNULL) Execute(frame *runtimedata.Frame) {
 	ref := frame.OperandStack().PopRef()
