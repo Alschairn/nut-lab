@@ -6,10 +6,10 @@ import (
 )
 
 type Class struct {
-	accessFlags       uint16                  // 类的访问标志
-	name              string                  // 类名（全限定名）
-	superClassName    string                  // 超类名（全限定名）
-	interfaceNames    []string                // 接口名（全限定名）
+	accessFlags       uint16        // 类的访问标志
+	name              string        // 类名（全限定名）
+	superClassName    string        // 超类名（全限定名）
+	interfaceNames    []string      // 接口名（全限定名）
 	constantPool      *ConstantPool // 存放运行时常量池指针
 	fields            []*Field
 	methods           []*Method
